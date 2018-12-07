@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d09fd2-e582-41db-99bf-5df2ed2e256a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuakeFall/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuakeFall/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.QuakeFall/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.QuakeFall/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stylized foliages pack/Materials.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Stylized foliages pack/Meshes.meta" beforeDir="false" />
@@ -58,12 +56,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="1132" />
+          <entry key="cs" value="1222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="1132" />
+          <entry key="C#" value="1222" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -80,21 +78,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+            <state relative-caret-position="240">
+              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
               <folding>
-                <marker date="1544197710907" expanded="false" signature="6:44" ph="..." />
-                <marker date="1544197710907" expanded="true" signature="62:1902" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="108:1900" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="681:778" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="913:1795" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="992:1340" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="1169:1335" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="1220:1329" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="1344:1551" ph="/* This allows the player to WallRun on a wall that is on the left and use any remaining jumps to get somewhere. ... */" />
-                <marker date="1544197710907" expanded="true" signature="1626:1783" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="1675:1778" ph="{...}" />
-                <marker date="1544197710907" expanded="true" signature="1821:1897" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="6:44" ph="..." />
+                <marker date="1544197989255" expanded="true" signature="62:2013" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="108:2011" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="699:796" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="931:2008" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="1010:1364" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="1187:1359" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="1238:1353" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="1368:1575" ph="/* This allows the player to WallRun on a wall that is on the left and use any remaining jumps to get somewhere. ... */" />
+                <marker date="1544197989255" expanded="true" signature="1650:1813" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="1699:1808" ph="{...}" />
+                <marker date="1544197989255" expanded="true" signature="1847:1928" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -266,12 +264,12 @@
       <option name="presentableId" value="Default" />
       <updated>1544111143661</updated>
       <workItem from="1544111152262" duration="5191000" />
-      <workItem from="1544196433772" duration="1276000" />
+      <workItem from="1544196433772" duration="1568000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8990000" />
+    <option name="totallyTimeSpent" value="9282000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -385,21 +383,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="59" column="10" lean-forward="true" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
           <folding>
-            <marker date="1544197710907" expanded="false" signature="6:44" ph="..." />
-            <marker date="1544197710907" expanded="true" signature="62:1902" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="108:1900" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="681:778" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="913:1795" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="992:1340" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="1169:1335" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="1220:1329" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="1344:1551" ph="/* This allows the player to WallRun on a wall that is on the left and use any remaining jumps to get somewhere. ... */" />
-            <marker date="1544197710907" expanded="true" signature="1626:1783" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="1675:1778" ph="{...}" />
-            <marker date="1544197710907" expanded="true" signature="1821:1897" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="6:44" ph="..." />
+            <marker date="1544197989255" expanded="true" signature="62:2013" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="108:2011" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="699:796" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="931:2008" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="1010:1364" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="1187:1359" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="1238:1353" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="1368:1575" ph="/* This allows the player to WallRun on a wall that is on the left and use any remaining jumps to get somewhere. ... */" />
+            <marker date="1544197989255" expanded="true" signature="1650:1813" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="1699:1808" ph="{...}" />
+            <marker date="1544197989255" expanded="true" signature="1847:1928" ph="{...}" />
           </folding>
         </state>
       </provider>
