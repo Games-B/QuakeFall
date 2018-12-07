@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\justi\.Rider2018.2\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\justi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\justi\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_QuakeFall.1478229397.00" t="ExcludeRecursive" />
-    <e p="C:\Users\justi\Documents\GitHub\QuakeFall\QuakeFall" t="IncludeRecursive">
+    <e p="C:\QuakeFall\QuakeFall" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Player" t="Include">
             <e p="PlayerCamera.cs" t="Include" />
             <e p="PlayerMovement.cs" t="Include" />
+            <e p="PlayerWallRun.cs" t="Include" />
           </e>
         </e>
       </e>
@@ -22,5 +20,7 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
+    <e p="C:\Users\hbahemia\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\hbahemia\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_QuakeFall.-721268813.00" t="ExcludeRecursive" />
   </component>
 </project>

@@ -14,8 +14,18 @@ namespace Player
 		[SerializeField] private Transform _camera;
 
 		private Rigidbody _rigidBody;
-		private int _currentJumps;
+		private int _jumpCount;
 
+		public void ChangeJumpCount(int amount)
+		{
+			_jumpCount += amount;
+		}
+		
+		public int GetJumpCount()
+		{
+			return _jumpCount;
+		}
+		
 		private void Awake()
 		{
 			_rigidBody = GetComponent<Rigidbody>();
@@ -24,7 +34,7 @@ namespace Player
 		private void Start()
 		{
 			// Stop the player jumping at the start until he touches the floor.
-			_currentJumps = _maxJumps;
+			_jumpCount = _maxJumps;
 		}
 
 		private void FixedUpdate()
@@ -44,9 +54,9 @@ namespace Player
 			}
 
 			// Check if the player can jump.
-			if (_currentJumps < _maxJumps && Input.GetKeyDown(KeyCode.Space))
+			if (_jumpCount < _maxJumps && Input.GetKeyDown(KeyCode.Space))
 			{
-				_currentJumps++;
+				_jumpCount++;
 
 				// Reset the current vertical velocity.
 				_rigidBody.velocity = new Vector3(_rigidBody.velocity.x, 0, _rigidBody.velocity.z);
@@ -58,7 +68,7 @@ namespace Player
 
 		private void OnCollisionEnter()
 		{
-			_currentJumps = 0;
+			_jumpCount = 0;
 		}
 	}
 }
