@@ -13,9 +13,9 @@ namespace Player
 
 		private Rigidbody _rb; // Reference to RigidBody
 		private PlayerMovement _playerMovement; // Reference for PlayerMovement Script.
-		[SerializeField] private float _runTime = 10f;
-
-		private float _currentTime;
+		[SerializeField] private float RunTime = 10f;
+		
+		private 
 	
 		// This will get the RigidBody of the player and the PlayerMovement when the player spawns in so that they can WallRun.
 		void Start ()
@@ -37,7 +37,7 @@ namespace Player
 						_isWallR = true;
 						_isWallL = false;
 						_rb.useGravity = false;
-						_currentTime = 0;
+						AfterRun();
 					}
 				}
 			}
@@ -50,18 +50,19 @@ namespace Player
 					_isWallL = true;
 					_isWallR = false;
 					_rb.useGravity = false;
-					_currentTime = 0;
+					AfterRun();
 				}
 			}
-
-			if (_currentTime <= _runTime)
-			{
-				_isWallL = false;
-				_isWallR = false;
-				_rb.useGravity = true;
-			}
-
-			_currentTime = Mathf.Clamp(_currentTime + Time.deltaTime, 0, _runTime);
+			
+			
+		}
+		
+		//
+		void AfterRun()
+		{
+			_isWallL = false;
+			_isWallR = false;
+			_rb.useGravity = true;
 		}
 	}
 }
