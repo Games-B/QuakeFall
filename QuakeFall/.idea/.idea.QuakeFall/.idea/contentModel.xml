@@ -11,6 +11,9 @@
             <e p="PlayerWallRun.cs" t="Include" />
           </e>
         </e>
+        <e p="Shaders" t="Include">
+          <e p="ItemGlow.shader" t="Include" />
+        </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
@@ -20,7 +23,7 @@
         <e p="bin" t="ExcludeRecursive" />
       </e>
     </e>
-    <e p="C:\Users\hbahemia\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\hbahemia\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_QuakeFall.-721268813.00" t="ExcludeRecursive" />
+    <e p="C:\Users\jgrigas\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\jgrigas\.Rider2018.2\system\resharper-host\Local\Transient\ReSharperHost\v182\SolutionCaches\_QuakeFall.-721268813.00" t="ExcludeRecursive" />
   </component>
 </project>
