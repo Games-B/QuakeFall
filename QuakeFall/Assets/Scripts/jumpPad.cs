@@ -1,14 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class jumpPad : MonoBehaviour {
-
-    public int jumpForce;
+public class JumpPad : MonoBehaviour
+{
+	[SerializeField, Range(0, 1000)] private float _jumpForce = 500;
  
-    private void OnTriggerEnter(Collider other)
-    {
-        other.GetComponent<Rigidbody>().AddForce(Vector3.up * jumpForce);
-    }
-        
+	// Trigger when another GameObject enters the jump pad's trigger.
+	private void OnTriggerEnter(Collider other)
+	{
+		// Work out the force to add to the object.
+		var forceToAdd = Vector3.up * _jumpForce;
+		// Add the force to the object's rigid body.
+		other.GetComponent<Rigidbody>().AddForce(forceToAdd);
+	}
 }
