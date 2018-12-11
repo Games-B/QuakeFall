@@ -63,20 +63,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="139" />
+          <entry key="cs" value="158" />
           <entry key="shader" value="758" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="139" />
+          <entry key="C#" value="158" />
           <entry key="ShaderLab" value="758" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.30" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.31" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -95,35 +98,30 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Shaders/ItemGlow.shader">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="697">
               <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
-              <folding>
-                <marker date="1544201494754" expanded="true" signature="21:922" ph="{...}" />
-                <marker date="1544201494754" expanded="true" signature="36:250" ph="{...}" />
-                <marker date="1544201494754" expanded="true" signature="263:920" ph="{...}" />
-                <marker date="1544201494754" expanded="true" signature="274:303" ph="{...}" />
-                <marker date="1544201494754" expanded="true" signature="316:912" ph="{...}" />
-              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="918">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/jumpPad.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+            <state relative-caret-position="68">
+              <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
               <folding>
-                <marker date="1544456323325" expanded="true" signature="36:1718" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="122:1716" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="467:500" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="531:561" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="587:638" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="662:768" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="798:1651" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="1063:1297" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="1400:1647" ph="{...}" />
-                <marker date="1544456323325" expanded="true" signature="1686:1713" ph="{...}" />
+                <marker date="1544542240116" expanded="false" signature="6:78" ph="..." />
+                <marker date="1544542240116" expanded="true" signature="117:292" ph="{...}" />
+                <marker date="1544542240116" expanded="true" signature="195:281" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,10 +133,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Shaders/ItemGlow.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/ItemGlow.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/jumpPad.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -147,6 +146,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Glow.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/jumpPad.cs" />
       </list>
     </option>
   </component>
@@ -156,9 +156,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="105" />
+    <option name="y" value="-17" />
     <option name="width" value="1374" />
     <option name="height" value="732" />
   </component>
@@ -168,6 +168,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="FileSystemExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -191,17 +195,13 @@
         </subPane>
         <option name="show-hidden-items" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -243,11 +243,13 @@
       <updated>1544111143661</updated>
       <workItem from="1544111152262" duration="5191000" />
       <workItem from="1544199458167" duration="2144000" />
+      <workItem from="1544542088043" duration="67000" />
+      <workItem from="1544542180411" duration="136000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8826000" />
+    <option name="totallyTimeSpent" value="9029000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -262,7 +264,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25746268" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26385927" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -279,7 +281,7 @@
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" visible="true" weight="0.32827735" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -314,6 +316,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Glow.shader" />
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerWallRun.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -321,36 +324,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs">
+    <entry file="file://$PROJECT_DIR$/Assets/Shaders/ItemGlow.shader">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
-          <folding>
-            <marker date="1544456323325" expanded="true" signature="36:1718" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="122:1716" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="467:500" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="531:561" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="587:638" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="662:768" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="798:1651" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="1063:1297" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="1400:1647" ph="{...}" />
-            <marker date="1544456323325" expanded="true" signature="1686:1713" ph="{...}" />
-          </folding>
+        <state relative-caret-position="697">
+          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Shaders/Glow.shader" />
-    <entry file="file://$PROJECT_DIR$/Assets/Shaders/ItemGlow.shader">
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerMovement.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="41" column="33" selection-start-line="41" selection-start-column="33" selection-end-line="41" selection-end-column="33" />
+        <state relative-caret-position="918">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/jumpPad.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="24" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
           <folding>
-            <marker date="1544201494754" expanded="true" signature="21:922" ph="{...}" />
-            <marker date="1544201494754" expanded="true" signature="36:250" ph="{...}" />
-            <marker date="1544201494754" expanded="true" signature="263:920" ph="{...}" />
-            <marker date="1544201494754" expanded="true" signature="274:303" ph="{...}" />
-            <marker date="1544201494754" expanded="true" signature="316:912" ph="{...}" />
+            <marker date="1544542240116" expanded="false" signature="6:78" ph="..." />
+            <marker date="1544542240116" expanded="true" signature="117:292" ph="{...}" />
+            <marker date="1544542240116" expanded="true" signature="195:281" ph="{...}" />
           </folding>
         </state>
       </provider>
