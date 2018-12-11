@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4910237795323054}
   - component: {fileID: 20647919553312910}
   - component: {fileID: 114644571658118732}
+  - component: {fileID: 114431506860808230}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -187,7 +188,20 @@ MonoBehaviour:
   _acceleration: 20
   _maxHorizontalVelocity: 10
   _maxJumps: 2
+  _stopSpeed: 0.5
   _camera: {fileID: 4910237795323054}
+--- !u!114 &114431506860808230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1149939146371096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 30fc6638458d14348b38d62604f617f5, type: 2}
 --- !u!114 &114644571658118732
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -199,8 +213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41db9f26ccb48624cad2a65e413ac117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _minAngle: -35
-  _maxAngle: 35
+  _minAngle: -85
+  _maxAngle: 85
   _horizontal: 5
   _vertical: 2
   _eulerAngle: {x: 0, y: 0, z: 0}
