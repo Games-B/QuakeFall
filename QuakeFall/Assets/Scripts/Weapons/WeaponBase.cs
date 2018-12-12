@@ -1,22 +1,19 @@
 ﻿using UnityEngine;
 
-public class WeaponBase : MonoBehaviour
+namespace Weapons
 {
-	//weapon name and image of weapon.
-	[SerializeField] private string _name;
-	[SerializeField] private Sprite _icon;
-	
-	//weapons stats.
-	[Space]
-	[SerializeField] private int _damage;
-	[SerializeField] private int _headshotdamage;
-	[SerializeField] private float _knockBack;
-	[SerializeField] private float _range;
-	[SerializeField] private int _ammo;
-	[SerializeField] private AmmoType _ammoType;
-	
-	private enum AmmoType
+	public class WeaponBase : MonoBehaviour
 	{
-		Pistol, Rocket, Rifle, Shotgun, Sniper
+		// Weapon name and image of weapon.
+		[SerializeField] private string _name;
+		[SerializeField] private Sprite _icon;
+	
+		// Weapons stats.
+		[Space]
+		[SerializeField] private int _damage;
+		[SerializeField] private int _headshotdamage;
+		[SerializeField] private float _knockBack;
+		[SerializeField] private float _range;
+		[SerializeField] private int _ammo;
 	}
 }

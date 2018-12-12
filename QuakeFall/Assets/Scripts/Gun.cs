@@ -1,37 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-
-	public float Damage = 10f;
-	public float Range = 100f;
+	[SerializeField] private float _damage = 10f;
+	[SerializeField] private float _range = 100f;
 
 	public Camera FpsCam;
 	
-	// Update is called once per frame
-	void Update () 
+	// Unity Methods.
+	private void Update () 
 	{
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetKeyDown(KeyCode.Mouse0))
 		{
 			Shoot();
 		}
 	}
 
-	void Shoot()
+	// Custom Methods.
+	private void Shoot()
 	{
 		RaycastHit hit;
-		if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, Range))
+		if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, _range))
 		{
 			Debug.Log(hit.transform.name);
 
-			Target target = hit.transform.GetComponent<Target>();
+			var target = hit.transform.GetComponent<Target>();
 			if (target != null)
 			{
-				target.TakeDamage(Damage);
+				target.TakeDamage(_damage);
 			}
 		}
-
 	}
 }

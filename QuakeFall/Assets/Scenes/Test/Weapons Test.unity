@@ -262,17 +262,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1360542668}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98cf0f8f29dad3047ab5e7085c776722, type: 3}
+  m_Script: {fileID: 11500000, guid: b7493432635b48140a990e6a6ba7865f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Pistol
   _icon: {fileID: 0}
-  _damage: 0
-  _headshotdamage: 0
-  _knockBack: 0
-  _range: 0
-  _ammo: 99
-  _ammoType: 0
+  _damage: 5
+  _headshotdamage: 10
+  _knockBack: 100
+  _range: 75
+  _ammo: 0
 --- !u!4 &1360542670
 Transform:
   m_ObjectHideFlags: 0
