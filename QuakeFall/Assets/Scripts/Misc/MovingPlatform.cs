@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+namespace Misc
 {
-	private void OnTriggerEnter(Collider other)
+	public class MovingPlatform : MonoBehaviour
 	{
-		// When an object enters the platform trigger, it gets parented meaning it will move with the platform.
-		other.transform.parent = transform;
-	}
+		private void OnTriggerEnter(Collider other)
+		{
+			// When an object enters the platform trigger, it gets parented meaning it will move with the platform.
+			other.transform.parent = transform;
+		}
 
-	private void OnTriggerExit(Collider other)
-	{
-		// When the object leaves the trigger, it loses the parent to make it move independently.
-		other.transform.parent = null;
+		private void OnTriggerExit(Collider other)
+		{
+			// When the object leaves the trigger, it loses the parent to make it move independently.
+			other.transform.parent = null;
+		}
 	}
 }
