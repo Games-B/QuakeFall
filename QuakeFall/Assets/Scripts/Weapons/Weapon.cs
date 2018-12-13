@@ -2,7 +2,7 @@
 
 namespace Weapons
 {
-	public class WeaponBase : MonoBehaviour
+	public class Weapon : MonoBehaviour
 	{
 		// Weapon name and image of weapon.
 		[SerializeField] private string _name;
