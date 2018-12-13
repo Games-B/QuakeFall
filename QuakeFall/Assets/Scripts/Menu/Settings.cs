@@ -6,21 +6,15 @@ namespace Menu
 	public class Settings : MonoBehaviour
 	{
 		[SerializeField] private Slider _fovSlider;
-		[SerializeField] private Slider _brightnessSlider;
 
-		private float _rbgValue = 0.5f;
 		
 		//Sound and music needed to experiment with linking the slider 
-		public void SetVolume(float volume)
+		public void SetVolume(float volume) //For in game master audio use AudioListener.Volume
 		{
-			Debug.Log(volume);
+			Debug.Log(volume); 
 		
 		}
 
-			public void AdjustAmbientLight (float rbgValue){
-				RenderSettings.ambientLight = new Color (rbgValue, rbgValue, rbgValue, 1);
-				PlayerPrefs.SetFloat("Realtime Brightness", _brightnessSlider.value);
-			}
 		
 		public void SetQuality(int qualityIndex)
 		{
