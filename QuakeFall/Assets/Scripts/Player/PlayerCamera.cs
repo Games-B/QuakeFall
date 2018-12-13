@@ -2,7 +2,7 @@
 
 namespace Player
 {
-	[RequireComponent(typeof(Camera))]
+	[RequireComponent(typeof(UnityEngine.Camera))]
 	public class PlayerCamera : MonoBehaviour
 	{
 		[Header("Vertical Bounds"), SerializeField] private float _minAngle;
