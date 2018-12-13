@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 
+<<<<<<< HEAD
 namespace Player
 {
 	public class Gun : MonoBehaviour
 	{
 		[SerializeField] private float _damage = 10f;
 		[SerializeField] private float _range = 100f;
+=======
+public class PlayerShoot : MonoBehaviour
+{
+	[SerializeField] private int _damage;
+	[SerializeField] private float _range;
+>>>>>>> BoopGun
 
 		public Camera FpsCam;
 	
