@@ -2,10 +2,10 @@
 
 namespace Player
 {
-	public class Gun : MonoBehaviour
+	public class PlayerShoot : MonoBehaviour
 	{
-		[SerializeField] private float _damage = 10f;
-		[SerializeField] private float _range = 100f;
+		[SerializeField] private int _damage;
+		[SerializeField] private int _range;
 
 		public Camera FpsCam;
 	
