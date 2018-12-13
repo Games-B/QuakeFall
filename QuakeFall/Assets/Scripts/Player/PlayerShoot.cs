@@ -7,7 +7,7 @@ namespace Player
 		[SerializeField] private int _damage;
 		[SerializeField] private int _range;
 
-		public Camera FpsCam;
+		[SerializeField] private UnityEngine.Camera _fpsCam;
 	
 		// Unity Methods.
 		private void Update () 
@@ -22,7 +22,7 @@ namespace Player
 		private void Shoot()
 		{
 			RaycastHit hit;
-			if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, _range))
+			if (Physics.Raycast(_fpsCam.transform.position, _fpsCam.transform.forward, out hit, _range))
 			{
 				Debug.Log(hit.transform.name);
 			}
