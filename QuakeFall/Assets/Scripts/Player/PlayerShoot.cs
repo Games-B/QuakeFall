@@ -25,12 +25,6 @@ namespace Player
 			if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, _range))
 			{
 				Debug.Log(hit.transform.name);
-
-				var target = hit.transform.GetComponent<Target>();
-				if (target != null)
-				{
-					target.TakeDamage(_damage);
-				}
 			}
 		}
 	}
