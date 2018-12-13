@@ -1,33 +1,37 @@
 ﻿using UnityEngine;
 
+<<<<<<< HEAD
+namespace Player
+{
+	public class Gun : MonoBehaviour
+	{
+		[SerializeField] private float _damage = 10f;
+		[SerializeField] private float _range = 100f;
+=======
 public class PlayerShoot : MonoBehaviour
 {
 	[SerializeField] private int _damage;
 	[SerializeField] private float _range;
+>>>>>>> BoopGun
 
-	public Camera FpsCam;
+		public Camera FpsCam;
 	
-	// Unity Methods.
-	private void Update () 
-	{
-		if (Input.GetKeyDown(KeyCode.Mouse0))
+		// Unity Methods.
+		private void Update () 
 		{
-			Shoot();
-		}
-	}
-
-	// Custom Methods.
-	private void Shoot()
-	{
-		RaycastHit hit;
-		if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, _range))
-		{
-			Debug.Log(hit.transform.name);
-
-			var target = hit.transform.GetComponent<Target>();
-			if (target != null)
+			if (Input.GetKeyDown(KeyCode.Mouse0))
 			{
-				target.TakeDamage(_damage);
+				Shoot();
+			}
+		}
+
+		// Custom Methods.
+		private void Shoot()
+		{
+			RaycastHit hit;
+			if (Physics.Raycast(FpsCam.transform.position, FpsCam.transform.forward, out hit, _range))
+			{
+				Debug.Log(hit.transform.name);
 			}
 		}
 	}

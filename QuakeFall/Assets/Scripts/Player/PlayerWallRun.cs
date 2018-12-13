@@ -5,57 +5,61 @@ namespace Player
 {
 	public class PlayerWallRun : MonoBehaviour
 	{
-
-		private bool _isWallR;
-		private bool _isWallL;
-		private RaycastHit _hitR;
-		private RaycastHit _hitL;
-
-		private Rigidbody _rb;
-		private PlayerMovement _playerMovement;
-		public float RunTime = 10f;
 	
-		// Use this for initialization
+		private bool _isWallR; // Reference for right wall
+		private bool _isWallL; // Reference for left wall
+		private RaycastHit _hitR; // Reference for hitting right wall
+		private RaycastHit _hitL; // Reference for hitting left wall
+
+		private Rigidbody _rb; // Reference to RigidBody
+		private PlayerMovement _playerMovement; // Reference for PlayerMovement Script.
+		[SerializeField] private float RunTime = 10f;
+		
+		private 
+	
+		// This will get the RigidBody of the player and the PlayerMovement when the player spawns in so that they can WallRun.
 		void Start ()
 		{
 			_rb = GetComponent<Rigidbody>();
 			_playerMovement = GetComponent<PlayerMovement>();
 		}
 	
-		// Update is called once per frame
+		// This allows the player to WallRun on a wall that is on the right and use any remaining jumps to get somewhere. 
 		void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.E) && _playerMovement.GetJumpCount() <= 1)
 			{
+				// Uses Raycast so that if the player is aiming at the wall it will allow WallRun to happen
 				if (Physics.Raycast(transform.position, transform.right, out _hitR, 1))
 				{
 					if (_hitR.transform.CompareTag("Wall"))
 					{
 						_isWallR = true;
 						_isWallL = false;
-						_playerMovement.ChangeJumpCount(-1);
 						_rb.useGravity = false;
-						StartCoroutine(AfterRun());
+						AfterRun();
 					}
 				}
 			}
-
-			if (Physics.Raycast(transform.position, transform.right, out _hitR, 1))
+			// This allows the player to WallRun on a wall that is on the left and use any remaining jumps to get somewhere.
+			// Uses Raycast so that if the player is aiming at the wall it will allow WallRun to happen
+			if (Physics.Raycast(transform.position, transform.right, out _hitL, 1))
 			{
-				if (_hitR.transform.CompareTag("Wall"))
+				if (_hitL.transform.CompareTag("Wall"))
 				{
 					_isWallL = true;
 					_isWallR = false;
-					_playerMovement.ChangeJumpCount(-1);
 					_rb.useGravity = false;
-					StartCoroutine(AfterRun());
+					AfterRun();
 				}
 			}
+			
+			
 		}
-
-		IEnumerator AfterRun()
+		
+		//
+		void AfterRun()
 		{
-			yield return new WaitForSeconds(RunTime);
 			_isWallL = false;
 			_isWallR = false;
 			_rb.useGravity = true;
