@@ -4,7 +4,7 @@ namespace Weapons
 {
 	public class Weapon : MonoBehaviour
 	{
-		// Weapon name and image of weapon.
+		// Weapon name, image, model, and if its enabled in the inventory.
 		[SerializeField] private string _name;
 		[SerializeField] private Sprite _icon;
 		[SerializeField] private bool _enabled;
@@ -22,6 +22,11 @@ namespace Weapons
 		public void SetEnabled(bool isEnabled)
 		{
 			_enabled = isEnabled;
+		}
+
+		public bool GetIsEnabled()
+		{
+			return _enabled;
 		}
 	}
 }

@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Boopgun
   _icon: {fileID: 0}
-  _enabled: 0
+  _enabled: 1
   _model: {fileID: 0}
   _damage: 0
   _headshotdamage: 0

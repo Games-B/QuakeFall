@@ -89,7 +89,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: Pistol
   _icon: {fileID: 0}
-  _enabled: 0
+  _enabled: 1
   _model: {fileID: 100020, guid: bfec925a95a03ce4c84ffc15fac36dbc, type: 3}
   _damage: 5
   _headshotdamage: 10
