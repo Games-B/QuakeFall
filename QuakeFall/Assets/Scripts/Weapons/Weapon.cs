@@ -8,6 +8,7 @@ namespace Weapons
 		[SerializeField] private string _name;
 		[SerializeField] private Sprite _icon;
 		[SerializeField] private bool _enabled;
+		[SerializeField] private GameObject _model;
 	
 		// Weapons stats.
 		[Space]

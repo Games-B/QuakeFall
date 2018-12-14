@@ -15,6 +15,20 @@ namespace Weapons
 			Pistol, Rifle, Boopgun, Sniper, Shotgun 
 		}
 
+		private void Start()
+		{
+			SetupWeapons();
+		}
+
+		private void SetupWeapons()
+		{
+			for (int i = 1; i < _inventory.Count - 1; i++)
+			{
+				RemoveWeapon(i);
+			}
+			SwitchWeapons(0);
+		}
+
 		public void SwitchWeapons(int index)
 		{
 			_previousWeapon = _activeWeapon;
