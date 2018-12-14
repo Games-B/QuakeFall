@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 811a230441889f34b8e080fb6c062c83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _knockBack: 750
+  _knockBack: 550
   _range: 10
   _knockBackRange: 40
   _rigidBodies:
