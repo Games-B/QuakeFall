@@ -17,6 +17,8 @@ public class ButtonManagerTest : MonoBehaviour
 	void Start ()
 	{
 		OptionsPanel.SetActive(false);
+		GraphicsPanel.SetActive(false);
+		SoundPanel.SetActive(false);
 	}
 	
 	// Update is called once per frame
@@ -28,6 +30,30 @@ public class ButtonManagerTest : MonoBehaviour
 	{
 		OptionsPanel.SetActive(true);
 	}
-	
-	public 
+
+	public void Gameplay()
+	{
+		GameplayPanel.SetActive(true);
+		GraphicsPanel.SetActive(false);
+		SoundPanel.SetActive(false);
+	}
+
+	public void Graphics()
+	{
+		GraphicsPanel.SetActive(true);
+		GameplayPanel.SetActive(false);
+		SoundPanel.SetActive(false);
+	}
+
+	public void Sound()
+	{
+		SoundPanel.SetActive(true);
+		GraphicsPanel.SetActive(false);
+		GameplayPanel.SetActive(false);
+	}
+
+	public void BackSettingsPanel()
+	{
+		OptionsPanel.SetActive(false);
+	}
 }
