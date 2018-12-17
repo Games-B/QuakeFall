@@ -14,6 +14,7 @@ namespace Player
 		[SerializeField] private Transform _camera;
 
 		private Rigidbody _rigidBody;
+        private AudioManager _audioManager;
 		private int _jumpCount;
 
 		public void ChangeJumpCount(int amount)
@@ -30,7 +31,9 @@ namespace Player
 		private void Awake()
 		{
 			_rigidBody = GetComponent<Rigidbody>();
-		}
+            _audioManager = FindObjectOfType<AudioManager>();
+
+        }
 
 		private void Start()
 		{
@@ -77,7 +80,8 @@ namespace Player
 				
 				var newForce = Vector3.up * _jumpForce;
 				_rigidBody.AddForce(newForce);
-			}
+                _audioManager.Play("Jump");
+            }
 		}
 
 		private void OnCollisionEnter()

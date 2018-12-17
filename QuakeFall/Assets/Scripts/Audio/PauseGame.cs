@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -24,14 +24,14 @@ public class PauseGame : MonoBehaviour
         {
             Canvas.gameObject.SetActive(true);
             Time.timeScale = 0;
-            Player.GetComponent<Player>().enabled = false;
+            //Player.GetComponent<PlayerMovement>().enabled = false;
 
         }
         else
         {
             Canvas.gameObject.SetActive(false);
             Time.timeScale = 1;
-            Player.GetComponent<Player>().enabled = true;
+            //Player.GetComponent<PlayerMovement>().enabled = true;
         }
     }
-}*/
+}
