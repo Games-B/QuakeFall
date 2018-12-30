@@ -5,23 +5,44 @@ namespace Weapons
 	public class Weapon : MonoBehaviour
 	{
 		// Weapon name and image of weapon.
-		[SerializeField] private string _name;
-		[SerializeField] private Sprite _icon;
-		[SerializeField] private bool _enabled;
-		[SerializeField] private GameObject _model;
+		[SerializeField] protected string Name;
+		[SerializeField] protected Sprite Icon;
+		[SerializeField] protected bool Enabled;
+		[SerializeField] protected GameObject Model;
 	
 		// Weapons stats.
-		[Space]
-		[SerializeField] private int _damage;
-		[SerializeField] private int _headshotdamage;
-		[SerializeField] private float _knockBack;
-		[SerializeField] private float _range;
-		[SerializeField] private int _ammo;
+		[Space, SerializeField] protected int Damage;
+		[SerializeField] protected float KnockBack;
+		[SerializeField] protected float Range;
+		[SerializeField] protected int Ammo;
+		[SerializeField] protected float FireRate;
+		[SerializeField] protected Transform GunEnd;
+
+		private float _timeSinceShot;
 
 		// Getters and Setters.
 		public void SetEnabled(bool isEnabled)
 		{
-			_enabled = isEnabled;
+			Enabled = isEnabled;
 		}
+		
+		// Other methods.
+		private Vector3 GetShotPoint(Transform targetCamera)
+		{
+			return Vector3.zero;
+		}
+
+		protected bool Shoot(Transform targetCamera)
+		{
+			if (_timeSinceShot < FireRate) return false;
+
+			_timeSinceShot = 0;
+			var targetPoint = GetShotPoint(targetCamera);
+			SpawnBullet(targetPoint);
+			return true;
+		}
+
+		// Base bullet spawning, will be changed to either ray cast or projectile.
+		protected virtual void SpawnBullet(Vector3 targetPoint) {}
 	}
 }
