@@ -4,14 +4,11 @@ namespace Weapons
 {
 	public class Weapon : MonoBehaviour
 	{
-		// Weapon name and image of weapon.
-		[SerializeField] protected string Name;
+		[Header("Weapon"), SerializeField] protected string Name;
 		[SerializeField] protected Sprite Icon;
 		[SerializeField] protected bool Enabled;
 		[SerializeField] protected GameObject Model;
-	
-		// Weapons stats.
-		[Space, SerializeField] protected int Damage;
+		[SerializeField] protected int Damage;
 		[SerializeField] protected float KnockBack;
 		[SerializeField] protected float Range;
 		[SerializeField] protected int Ammo;
@@ -27,12 +24,23 @@ namespace Weapons
 		}
 		
 		// Other methods.
-		private Vector3 GetShotPoint(Transform targetCamera)
+		private Vector3 GetShotPoint(UnityEngine.Camera targetCamera)
 		{
+			var rayOrigin = targetCamera.ViewportToWorldPoint (new Vector3 (.5f, .5f, 0));
+			RaycastHit hit;
+			// Check if the bullet hits anything.
+			if (Physics.Raycast(rayOrigin, targetCamera.transform.forward, out hit, Range))
+			{
+				// Check if you hit another player.
+				if (hit.transform.CompareTag("Player"))
+				{
+					// Hurt the player.
+				}
+			}
 			return Vector3.zero;
 		}
 
-		protected bool Shoot(Transform targetCamera)
+		protected bool Shoot(UnityEngine.Camera targetCamera)
 		{
 			if (_timeSinceShot < FireRate) return false;
 
