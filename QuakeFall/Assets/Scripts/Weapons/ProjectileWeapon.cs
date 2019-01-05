@@ -7,14 +7,16 @@ namespace Weapons
 		[Header("Projectile Weapon"), SerializeField] private GameObject _projectilePrefab;
 		[SerializeField] private float _initialForce;
 
-		protected override void SpawnBullet(Vector3 targetPoint)
+		protected override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
-			// Spawn the new projectile.
+			if (!base.Shoot(targetCamera, out targetPoint, out hit)) return false;
+			
 			var newProjectile = Instantiate(_projectilePrefab, GunEnd.position, Quaternion.identity, null);
 			
 			// Point it towards the target object.
 			newProjectile.transform.LookAt(targetPoint);
 			newProjectile.GetComponent<Rigidbody>().AddForce(Vector3.forward * _initialForce);
+			return true;
 		}
 	}
 }

@@ -471,5 +471,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1653038204031310950, guid: da3c7db90b294394bacd40bf4782b77d,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653038204031310950, guid: da3c7db90b294394bacd40bf4782b77d,
+        type: 3}
+      propertyPath: _maxShield
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653038204031310950, guid: da3c7db90b294394bacd40bf4782b77d,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653038204031310950, guid: da3c7db90b294394bacd40bf4782b77d,
+        type: 3}
+      propertyPath: _currentShield
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da3c7db90b294394bacd40bf4782b77d, type: 3}

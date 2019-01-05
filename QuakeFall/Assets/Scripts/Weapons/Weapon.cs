@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Player;
+using UnityEngine;
 
 namespace Weapons
 {
@@ -15,42 +16,35 @@ namespace Weapons
 		[SerializeField] protected float FireRate;
 		[SerializeField] protected Transform GunEnd;
 
-		private float _timeSinceShot;
+		protected float TimeSinceShot;
 
 		// Getters and Setters.
 		public void SetEnabled(bool isEnabled)
 		{
 			Enabled = isEnabled;
 		}
-		
-		// Other methods.
-		private Vector3 GetShotPoint(UnityEngine.Camera targetCamera)
+
+		protected virtual bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
-			var rayOrigin = targetCamera.ViewportToWorldPoint (new Vector3 (.5f, .5f, 0));
-			RaycastHit hit;
-			// Check if the bullet hits anything.
+			// Set up the out parameters.
+			targetPoint = Vector3.zero;
+			hit = new RaycastHit();
+			
+			// Don't shoot if enough time has not passed.
+			if (!(TimeSinceShot >= FireRate)) return false;
+			TimeSinceShot = 0;
+			
+			var rayOrigin = targetCamera.ViewportToWorldPoint(new Vector3(.5f, .5f, 0));
+			// Check if the ray cast hits anything.
 			if (Physics.Raycast(rayOrigin, targetCamera.transform.forward, out hit, Range))
 			{
-				// Check if you hit another player.
-				if (hit.transform.CompareTag("Player"))
-				{
-					// Hurt the player.
-				}
+				targetPoint = hit.point;
 			}
-			return Vector3.zero;
-		}
-
-		protected bool Shoot(UnityEngine.Camera targetCamera)
-		{
-			if (_timeSinceShot < FireRate) return false;
-
-			_timeSinceShot = 0;
-			var targetPoint = GetShotPoint(targetCamera);
-			SpawnBullet(targetPoint);
+			else
+			{
+				targetPoint = targetCamera.transform.forward * Range;
+			}
 			return true;
 		}
-
-		// Base bullet spawning, will be changed to either ray cast or projectile.
-		protected virtual void SpawnBullet(Vector3 targetPoint) {}
 	}
 }
