@@ -5,9 +5,9 @@ namespace Weapons
 {
 	public class Inventory : MonoBehaviour
 	{
-		[SerializeField] private GameObject _activeWeapon;
-		[SerializeField] private GameObject _previousWeapon; 
-		[SerializeField] private List<GameObject> _inventory = new List<GameObject>(5);
+		[SerializeField] private Weapon _activeWeapon;
+		[SerializeField] private Weapon _previousWeapon; 
+		[SerializeField] private List<Weapon> _inventory = new List<Weapon>(5);
 		[SerializeField] private bool _swapToPickup;
 
 		enum WeaponType
@@ -22,7 +22,7 @@ namespace Weapons
 
 		private void SetupWeapons()
 		{
-			for (int i = 1; i < _inventory.Count - 1; i++)
+			for (var i = 1; i < _inventory.Count - 1; i++)
 			{
 				RemoveWeapon(i);
 			}
