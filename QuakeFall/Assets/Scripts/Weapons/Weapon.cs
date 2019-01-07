@@ -17,6 +17,7 @@ namespace Weapons
 		[SerializeField] private float _knockBack;
 		[SerializeField] private float _range;
 		[SerializeField] private int _ammo;
+		[SerializeField] private int _spread;
 
 		// Getters and Setters.
 		public void SetEnabled(bool isEnabled)
