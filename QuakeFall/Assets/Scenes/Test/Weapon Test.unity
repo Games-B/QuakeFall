@@ -113,6 +113,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &726085
 GameObject:
   m_ObjectHideFlags: 0
@@ -218,6 +219,8 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+=======
+>>>>>>> Weapons
 --- !u!1 &101501344
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +298,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &264618365
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,6 +741,8 @@ Transform:
   m_Father: {fileID: 711952322}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> Weapons
 --- !u!1 &795956745
 GameObject:
   m_ObjectHideFlags: 0
