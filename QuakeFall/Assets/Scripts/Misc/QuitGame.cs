@@ -3,12 +3,10 @@ using UnityEngine.Networking;
 
 namespace Misc
 {
-	public class QuitGame : NetworkBehaviour
+	public class QuitGame : MonoBehaviour
 	{
 		private void Update()
 		{
-			if(!isLocalPlayer) return;
-
 			if (Input.GetKeyDown(KeyCode.Escape))
 			{
 				Application.Quit();

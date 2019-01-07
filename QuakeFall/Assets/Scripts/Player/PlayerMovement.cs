@@ -81,11 +81,6 @@ namespace Player
 			}
 		}
 
-		public override void OnStartLocalPlayer()
-		{
-			GetComponent<MeshRenderer>().material.color = Color.blue;
-		}
-
 		private void OnCollisionEnter()
 		{
 			_jumpCount = 0;
