@@ -2,18 +2,34 @@
 
 namespace Misc
 {
-	public class MovingPlatform : MonoBehaviour
+	public class MovingPlatform : MonoBehaviour 
 	{
-		private void OnTriggerEnter(Collider other)
-		{
-			// When an object enters the platform trigger, it gets parented meaning it will move with the platform.
-			other.transform.parent = transform;
-		}
+		[SerializeField] private Transform[] _wayPoints;
+		[SerializeField] private float _speed = 2;
+		[SerializeField] private int _currentPoint;
 
-		private void OnTriggerExit(Collider other)
+		private void Update () 
 		{
-			// When the object leaves the trigger, it loses the parent to make it move independently.
-			other.transform.parent = null;
+			// Check if the platform is in the same position as the way point.
+			if(transform.position != _wayPoints[_currentPoint].transform.position)
+			{
+				// Move the platform towards the way point.
+				transform.position = Vector3.MoveTowards(transform.position,
+					_wayPoints[_currentPoint].transform.position, _speed * Time.deltaTime);
+			}
+			// Once the platform goes to the way point, target the next one.
+			else
+			{
+				// Target the first way point if you get to the end of the list.
+				if( _currentPoint >= _wayPoints.Length)
+				{
+					_currentPoint = 0; 
+				}
+				else
+				{
+					_currentPoint += 1;
+				}
+			}
 		}
 	}
 }
