@@ -116,7 +116,7 @@ MonoBehaviour:
   _knockBackRange: 400
   _rigidBodies:
   - {fileID: 54426140587771138, guid: da3c7db90b294394bacd40bf4782b77d, type: 2}
-  - {fileID: 54426140587771138, guid: da3c7db90b294394bacd40bf4782b77d, type: 2}
+  - {fileID: 54426140587771138, guid: cf2379dde310c5e4d822b5debc4e1033, type: 2}
 --- !u!135 &135672853900783216
 SphereCollider:
   m_ObjectHideFlags: 1

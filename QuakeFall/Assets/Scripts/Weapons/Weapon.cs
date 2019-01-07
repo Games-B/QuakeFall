@@ -23,5 +23,5 @@ namespace Weapons
 		{
 			_enabled = isEnabled;
 		}
-	}
+	}xx
 }
