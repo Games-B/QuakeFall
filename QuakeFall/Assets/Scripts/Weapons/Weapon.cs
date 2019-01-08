@@ -51,5 +51,5 @@ namespace Weapons
 			}
 			return true;
 		}
-	}xx
+	}
 }
