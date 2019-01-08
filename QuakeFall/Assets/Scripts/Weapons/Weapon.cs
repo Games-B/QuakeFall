@@ -7,6 +7,8 @@ namespace Weapons
 		// Weapon name and image of weapon.
 		[SerializeField] private string _name;
 		[SerializeField] private Sprite _icon;
+		[SerializeField] private bool _enabled;
+		[SerializeField] private GameObject _model;
 	
 		// Weapons stats.
 		[Space]
@@ -15,5 +17,12 @@ namespace Weapons
 		[SerializeField] private float _knockBack;
 		[SerializeField] private float _range;
 		[SerializeField] private int _ammo;
+		[SerializeField] private int _spread;
+
+		// Getters and Setters.
+		public void SetEnabled(bool isEnabled)
+		{
+			_enabled = isEnabled;
+		}
 	}
 }

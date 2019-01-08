@@ -1,29 +1,17 @@
 fileFormatVersion: 2
-guid: 5df7476d355a8d942b7c0856fb4e7b86
+guid: 46b14c3a65a86714497297514bbb3e1c
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: pCube2
-    100002: pCube3
-    100004: pCylinder1
-    100006: //RootNode
-    400000: pCube2
-    400002: pCube3
-    400004: pCylinder1
-    400006: //RootNode
-    2100000: blinn1
-    2100002: lambert1
-    2100004: lambert2
-    2100006: surfaceShader1
-    2300000: pCube2
-    2300002: pCube3
-    2300004: pCylinder1
-    3300000: pCube2
-    3300002: pCube3
-    3300004: pCylinder1
-    4300000: pCube2
-    4300002: pCube3
-    4300004: pCylinder1
+    100000: humanBody_0
+    100002: //RootNode
+    400000: humanBody_0
+    400002: //RootNode
+    2100000: humanBody_0Mat
+    2300000: humanBody_0
+    3300000: humanBody_0
+    4300000: humanBody_0
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -52,16 +40,16 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 0.01
     meshCompression: 0
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -82,7 +70,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2

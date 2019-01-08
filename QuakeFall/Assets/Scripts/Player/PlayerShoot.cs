@@ -6,6 +6,7 @@ namespace Player
 	{
 		[SerializeField] private int _damage;
 		[SerializeField] private int _range;
+		[SerializeField] private int _ammo;
 
 		[SerializeField] private UnityEngine.Camera _fpsCam;
 	
