@@ -20,16 +20,24 @@ namespace Misc
 			// Once the platform goes to the way point, target the next one.
 			else
 			{
-				// Target the first way point if you get to the end of the list.
-				if( _currentPoint >= _wayPoints.Length)
-				{
-					_currentPoint = 0; 
-				}
-				else
-				{
-					_currentPoint += 1;
-				}
+				_currentPoint += 1;
 			}
+			
+			// Target the first way point if you get to the end of the list.
+			if( _currentPoint >= _wayPoints.Length)
+			{
+				_currentPoint = 0; 
+			}
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+			other.transform.parent = transform;
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+			other.transform.parent = null;
 		}
 	}
 }
