@@ -5,8 +5,8 @@ namespace Weapons
 {
 	public class Inventory : MonoBehaviour
 	{
-		[SerializeField] private Weapon _activeWeapon;
-		[SerializeField] private Weapon _previousWeapon; 
+		[SerializeField] private int _activeWeapon;
+		[SerializeField] private int _previousWeapon; 
 		[SerializeField] private List<Weapon> _inventory = new List<Weapon>(5);
 		[SerializeField] private bool _swapToPickup;
 
@@ -22,37 +22,51 @@ namespace Weapons
 
 		private void SetupWeapons()
 		{
+			// Remove all weapons apart from the first one.
 			for (var i = 1; i < _inventory.Count - 1; i++)
 			{
 				RemoveWeapon(i);
 			}
+			
+			// Switch to the first weapon.
 			SwitchWeapons(0);
 		}
 
-		public void SwitchWeapons(int index)
+		public bool SwitchWeapons(int targetIndex)
 		{
+			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
+			if (!_inventory[targetIndex].IsEnabled() || _activeWeapon == targetIndex) return false;
+			
+			// Update the previous weapon.
 			_previousWeapon = _activeWeapon;
-			_activeWeapon = _inventory[index];
+			// Switch to the target weapon.
+			_activeWeapon = targetIndex;
+
+			return true;
 		}
 
-		public void AddWeapon(int index)
+		public void AddWeapon(int targetIndex)
 		{
-			_inventory[index].GetComponent<Weapon>().SetEnabled(true);
-			
+			// Enable the target weapon.
+			_inventory[targetIndex].GetComponent<Weapon>().SetEnabled(true);
+
+			// Swap to the newly added weapon if the setting is enabled.
 			if (_swapToPickup)
 			{
-				SwitchWeapons(index);
+				SwitchWeapons(targetIndex);
 			}
 		}
 
-		public void RemoveWeapon(int index)
+		public void RemoveWeapon(int targetIndex)
 		{
 			// Swap to the previous weapon if the current one is being removed.
-			if (index == _inventory.IndexOf(_activeWeapon))
+			if (targetIndex == _activeWeapon)
 			{
-				SwitchWeapons(_inventory.IndexOf(_previousWeapon));
+				SwitchWeapons(_previousWeapon);
 			}
-			_inventory[index].GetComponent<Weapon>().SetEnabled(false);
+			
+			// Remove the target weapon.
+			_inventory[targetIndex].SetEnabled(false);
 		}
 	}
 }

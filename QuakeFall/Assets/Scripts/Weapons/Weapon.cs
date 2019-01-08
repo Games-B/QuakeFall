@@ -1,12 +1,10 @@
-﻿using Player;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Weapons
 {
 	public class Weapon : MonoBehaviour
 	{
 		[Header("Weapon"), SerializeField] protected string Name;
-		[SerializeField] protected Vector2 Recoil;
 		[SerializeField] protected Sprite Icon;
 		[SerializeField] protected bool Enabled;
 		[SerializeField] protected float Range;
@@ -22,6 +20,12 @@ namespace Weapons
 			Enabled = isEnabled;
 		}
 
+		public bool IsEnabled()
+		{
+			return Enabled;
+		}
+		
+		// Custom methods.
 		protected virtual bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
 			// Don't shoot if enough time has not passed or you don't have enough ammo or you don't have the weapon.
