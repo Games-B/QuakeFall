@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Weapons
 {
-	public class Inventory : MonoBehaviour
+	public class Arsenal : MonoBehaviour
 	{
 		[SerializeField] private int _activeWeapon;
 		[SerializeField] private int _previousWeapon; 
@@ -15,6 +15,13 @@ namespace Weapons
 			Pistol, Rifle, Boopgun, Sniper, Shotgun 
 		}
 
+		// Getters and setters.
+		public Weapon GetActiveWeapon()
+		{
+			return _inventory[_activeWeapon];
+		}
+
+		// Unity methods.
 		private void Start()
 		{
 			SetupWeapons();
@@ -29,13 +36,14 @@ namespace Weapons
 			}
 			
 			// Switch to the first weapon.
+			_inventory[0].enabled = true;
 			SwitchWeapons(0);
 		}
 
 		public bool SwitchWeapons(int targetIndex)
 		{
 			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
-			if (!_inventory[targetIndex].IsEnabled() || _activeWeapon == targetIndex) return false;
+			if (!_inventory[targetIndex].enabled || _activeWeapon == targetIndex) return false;
 			
 			// Update the previous weapon.
 			_previousWeapon = _activeWeapon;
@@ -48,7 +56,7 @@ namespace Weapons
 		public void AddWeapon(int targetIndex)
 		{
 			// Enable the target weapon.
-			_inventory[targetIndex].GetComponent<Weapon>().SetEnabled(true);
+			_inventory[targetIndex].GetComponent<Weapon>().enabled = true;
 
 			// Swap to the newly added weapon if the setting is enabled.
 			if (_swapToPickup)
@@ -66,7 +74,7 @@ namespace Weapons
 			}
 			
 			// Remove the target weapon.
-			_inventory[targetIndex].SetEnabled(false);
+			_inventory[targetIndex].enabled = false;
 		}
 	}
 }
