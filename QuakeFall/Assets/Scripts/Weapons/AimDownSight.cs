@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 
 public class AimDownSight : MonoBehaviour
@@ -9,7 +8,7 @@ public class AimDownSight : MonoBehaviour
 	[SerializeField, Range(0, 1)] private float _speed;
 	
 	// Update is called once per frame
-	void Update () 
+	public void Update () 
 	{
 		if (Input.GetKey(KeyCode.Mouse1))
 		{
