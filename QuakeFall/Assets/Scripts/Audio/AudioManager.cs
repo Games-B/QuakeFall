@@ -5,12 +5,15 @@ using System;
 public class AudioManager : MonoBehaviour {
 
     public Sound[] sounds;
+    public AudioMixer audioMixer;
+    [SerializeField] private AudioMixerGroup _audioGroup;
 
-	// Use this for initialization
-	void Awake () {
+    // Use this for initialization
+    void Awake () {
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
+            s.source.outputAudioMixerGroup = _audioGroup;
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
@@ -29,5 +32,20 @@ public class AudioManager : MonoBehaviour {
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("volume", volume);
+    }
+
+    public void SetSFXVolume(float soundVolume)
+    {
+        audioMixer.SetFloat("soundVolume", soundVolume);
+    }
+
+    public void SetMusicVolume(float musicVolume)
+    {
+        audioMixer.SetFloat("musicVolume", musicVolume);
     }
 }
