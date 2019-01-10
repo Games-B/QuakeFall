@@ -61,9 +61,19 @@ namespace Menu
 			OptionsPanel.SetActive(false);
 		}
 
-		public void Quit()
+		public void QuitConfirmation()
 		{
 			QuitAlert.SetActive(true);
+		}
+
+		public void CancelQuit()
+		{
+			QuitAlert.SetActive(false);
+		}
+
+		public void ConfirmQuit()
+		{
+			Application.Quit();
 		}
 	}
 }
