@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _damage: 10
-  _explosionRange: 50
+  _explosionRange: 30
   _explosionForce: 1000
   _lifespan: 10
 --- !u!135 &135580278966968522
