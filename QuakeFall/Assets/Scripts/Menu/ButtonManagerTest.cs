@@ -13,6 +13,7 @@ namespace Menu
 		public GameObject GameplayPanel;
 		public GameObject GraphicsPanel;
 		public GameObject SoundPanel;
+		public GameObject QuitAlert;
 
 
 		// Use this for initialization
@@ -58,6 +59,11 @@ namespace Menu
 		public void BackSettingsPanel()
 		{
 			OptionsPanel.SetActive(false);
+		}
+
+		public void Quit()
+		{
+			QuitAlert.SetActive(true);
 		}
 	}
 }

@@ -8,6 +8,10 @@ namespace Menu
 	{
 		[SerializeField] private Slider _fovSlider;
 
+		public GameObject HudManager;
+		public GameObject MapManager;
+		public GameObject EnemyHealth;
+
 
 		//Sound and music needed to experiment with linking the slider 
 		public void SetVolume(float volume) //For in game master audio use AudioListener.Volume
