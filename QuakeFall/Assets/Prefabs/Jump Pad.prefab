@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33200000342119182}
   - component: {fileID: 23832668669765014}
   - component: {fileID: 65388344136372970}
-  - component: {fileID: 114264423908656904}
+  - component: {fileID: 114304733772150632}
   m_Layer: 0
   m_Name: Jump Pad
   m_TagString: Untagged
@@ -36,9 +36,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1077970345054694}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 0.1, z: 2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.2, y: -236.8, z: 2.16}
+  m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114264423908656904
+--- !u!114 &114304733772150632
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32259437eab9e994387af4ec16858c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _jumpForce: 500
+  _jumpForce: 2000
