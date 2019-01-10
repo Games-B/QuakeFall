@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 10
   _explosionRange: 50
-  _explosionForce: 2000
+  _explosionForce: 1000
   _lifespan: 10
 --- !u!135 &135580278966968522
 SphereCollider:

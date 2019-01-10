@@ -431,6 +431,7 @@ GameObject:
   - component: {fileID: 114487845923867504}
   - component: {fileID: 114423650946227136}
   - component: {fileID: 114859915629477818}
+  - component: {fileID: 114872456651501404}
   - component: {fileID: 114118152015122720}
   - component: {fileID: 33144188029677392}
   - component: {fileID: 23731687638628474}
@@ -1238,7 +1239,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 2387e3d661bff6042aedddf580d15b47, type: 2}
+  - {fileID: 2100000, guid: 12d2efba1d1b92d45996eaa876e9dcb7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1528,10 +1529,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpForce: 300
-  _acceleration: 20
-  _maxHorizontalVelocity: 10
+  _acceleration: 0.2
   _maxJumps: 2
-  _stopSpeed: 0.5
   _camera: {fileID: 4953077157212550}
 --- !u!114 &114435770850304860
 MonoBehaviour:
@@ -1596,7 +1595,7 @@ MonoBehaviour:
   GunEnd: {fileID: 4890546750306838}
   _projectilePrefab: {fileID: 1924529434647614, guid: 557f474fd8fff4d4083df4c7eea256ab,
     type: 2}
-  _initialForce: 2000
+  _initialForce: 200
 --- !u!114 &114859915629477818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1612,3 +1611,16 @@ MonoBehaviour:
   _y: 1
   _z: 0
   _target: {fileID: 4953077157212550}
+--- !u!114 &114872456651501404
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799108290675578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d76daf7db38004a80fc144c440f9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _forceSpeed: 0.05
+  _torqueSpeed: 0.05
