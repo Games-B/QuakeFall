@@ -3,7 +3,7 @@
 	Properties
 	{
 		_Color ("Colour", Color) = (1,1,1,1)
-		_MainTex ("Albedo", 2D) = "white" {}
+		_MainTex ("Albedo", 2D) = "white"
 		_BumpMap ("Normal Map", 2D) = "bump" {}
 		_RimColour ("Rim Colour", Color) = (1,1,1,1)
 		_RimPower ("Rim Power", Range(0, 6)) = 3
@@ -12,11 +12,16 @@
 	{
 		Tags
 		{
-		"RenderType"="Opaque"
+		    "Queue"="Transparent"
+		    "RenderType"="Transparent"
 		}
+		LOD 100
+		
+		ZWrite Off
+		Blend SrcAlpha OneMinusSrcAlpha
 
 		CGPROGRAM
-		#pragma surface surf Lambert
+		#pragma surface surf Lambert alpha
 		
 		struct Input
 		{
@@ -36,6 +41,7 @@
 		{
 			IN.colour = _Color;
 			OUT.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb * IN.colour;
+			OUT.Alpha = _Color.a;
 			OUT.Normal = UnpackNormal (tex2D (_BumpMap, IN.bump));
 			
 			half rim = 1 - saturate (dot (normalize (IN.viewDir), OUT.Normal));

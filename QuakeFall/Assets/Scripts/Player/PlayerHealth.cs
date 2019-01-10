@@ -59,7 +59,7 @@ namespace Player
 		private void Die()
 		{
 			// Stuff that happens when you die.
-			print("U dEd PhAm!");
+			print("U dEd PhAm!"); 
 		}
 	}
 }
