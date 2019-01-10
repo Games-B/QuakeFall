@@ -374,6 +374,11 @@ Prefab:
       propertyPath: m_Name
       value: Jump Pad (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -460,6 +465,11 @@ Prefab:
     - target: {fileID: 1077970345054694, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
       propertyPath: m_Name
       value: Jump Pad (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -712,6 +722,11 @@ Prefab:
       propertyPath: m_Name
       value: Jump Pad (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 750
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -908,6 +923,11 @@ Prefab:
     - target: {fileID: 1077970345054694, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
       propertyPath: m_Name
       value: Jump Pad (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1174,6 +1194,11 @@ Prefab:
       propertyPath: _jumpForce
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -1282,6 +1307,11 @@ Prefab:
       propertyPath: m_Name
       value: Jump Pad (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -1352,6 +1382,11 @@ Prefab:
       propertyPath: m_Name
       value: Jump Pad (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -1402,6 +1437,11 @@ Prefab:
     - target: {fileID: 1077970345054694, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
       propertyPath: m_Name
       value: Jump Pad (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1554,6 +1594,11 @@ Prefab:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 500
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -1619,6 +1664,11 @@ Prefab:
     - target: {fileID: 4731648622501402, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
       propertyPath: m_RootOrder
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1250
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1860,6 +1910,11 @@ Prefab:
       propertyPath: m_Name
       value: Jump Pad (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1250
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
   m_IsPrefabAsset: 0
@@ -1910,6 +1965,11 @@ Prefab:
     - target: {fileID: 1077970345054694, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
       propertyPath: m_Name
       value: Jump Pad (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
+        type: 2}
+      propertyPath: _jumpForce
+      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
