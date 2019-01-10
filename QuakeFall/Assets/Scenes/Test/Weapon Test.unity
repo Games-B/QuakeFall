@@ -234,11 +234,11 @@ Prefab:
       propertyPath: _rigidBodies.Array.data[0]
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 114992683371336962, guid: af4fa5de133fbeb4da4e19df0c263952,
+    - target: {fileID: 23731687638628474, guid: 087c3ef9e90a8f340954f9e296668dc9,
         type: 2}
-      propertyPath: _fpsCam
+      propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: e324dee7d4aefd84682c253fd0ae5cb7, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af4fa5de133fbeb4da4e19df0c263952, type: 2}
   m_IsPrefabAsset: 0
