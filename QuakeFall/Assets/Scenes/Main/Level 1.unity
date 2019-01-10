@@ -377,11 +377,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1250
-=======
-      value: 1500
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -473,11 +469,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1500
-=======
-      value: 1750
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -800,34 +792,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300086, guid: 4a6e11b6abce086438a971926a3812fa, type: 3}
---- !u!1 &701654695
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 701654696}
-  m_Layer: 0
-  m_Name: Teleport Exit
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &701654696
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 701654695}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4526182, y: 91.50042, z: 122.704926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1498444448}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &707037866
 Prefab:
   m_ObjectHideFlags: 0
@@ -963,11 +927,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1250
-=======
-      value: 1500
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1237,11 +1197,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1500
-=======
-      value: 1750
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1354,11 +1310,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1500
-=======
-      value: 1750
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1489,11 +1441,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1250
-=======
-      value: 1000
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1720,11 +1668,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1250
-=======
-      value: 750
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -1969,11 +1913,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1250
-=======
-      value: 1500
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -2029,11 +1969,7 @@ Prefab:
     - target: {fileID: 114304733772150632, guid: 3748531ae8aa7e84ea5b99dc438ff334,
         type: 2}
       propertyPath: _jumpForce
-<<<<<<< HEAD
       value: 1500
-=======
-      value: 1750
->>>>>>> movingPlatforms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3748531ae8aa7e84ea5b99dc438ff334, type: 2}
@@ -2043,36 +1979,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4731648622501402, guid: 3748531ae8aa7e84ea5b99dc438ff334,
     type: 2}
   m_PrefabInternal: {fileID: 1446459850}
---- !u!1 &1498444447
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1498444448}
-  m_Layer: 0
-  m_Name: Super Secret
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1498444448
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1498444447}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.0426183, y: -29.790419, z: -123.204926}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1869026097}
-  - {fileID: 701654696}
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1503118100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100100, guid: 4a6e11b6abce086438a971926a3812fa,
@@ -2227,11 +2133,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300032, guid: 4a6e11b6abce086438a971926a3812fa, type: 3}
---- !u!1 &1602056897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1886642382102454, guid: da3c7db90b294394bacd40bf4782b77d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1647777886}
 --- !u!1 &1615656504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100022, guid: 4a6e11b6abce086438a971926a3812fa,
@@ -2530,61 +2431,6 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300048, guid: 4a6e11b6abce086438a971926a3812fa, type: 3}
---- !u!1 &1869026096
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1869026097}
-  - component: {fileID: 1869026099}
-  - component: {fileID: 1869026098}
-  m_Layer: 0
-  m_Name: Teleporter Entrance
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1869026097
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869026096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.04, y: 33.66, z: 123.18}
-  m_LocalScale: {x: 3.5436, y: 1, z: 4.6369}
-  m_Children: []
-  m_Father: {fileID: 1498444448}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1869026098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869026096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f375e9fb363d5a44ba47b88f3dcc166, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportTarget: {fileID: 701654696}
-  thePlayer: {fileID: 1602056897}
---- !u!65 &1869026099
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1869026096}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1963203402
 GameObject:
   m_ObjectHideFlags: 0
