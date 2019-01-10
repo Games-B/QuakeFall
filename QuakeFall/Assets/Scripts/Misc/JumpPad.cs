@@ -2,10 +2,9 @@
 
 namespace Misc
 {
-    public class JumpPad : MonoBehaviour
-    {
-        [SerializeField, Range(0, 1000)] private float _jumpForce = 500;
-
+	public class JumpPad : MonoBehaviour
+	{
+		[SerializeField, Range(0, 2000)] private float _jumpForce = 500;
         // Trigger when another GameObject enters the jump pad's trigger.
         private void OnTriggerEnter(Collider other)
         {
@@ -15,8 +14,8 @@ namespace Misc
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
             other.GetComponent<Rigidbody>().AddRelativeForce(forceToAdd);
-
             //FindObjectOfType<AudioManager>().Play("JumpPad");
+
         }
     }
 }
