@@ -8,6 +8,10 @@ public class AudioManager : MonoBehaviour {
     public AudioMixer audioMixer;
     [SerializeField] private AudioMixerGroup _audioGroup;
 
+    //  Use for calling Play();
+    // _audioManager = GameObject.Find("MusicVolumeManager").GetComponent<AudioManager>(); - This is for Music.
+    // _sfxManager = GameObject.Find("SFXVolumeManager").GetComponent<AudioManager>();     - This is for Sound Effects.
+
     // Use this for initialization
     void Awake () {
         foreach (Sound s in sounds)
@@ -31,6 +35,7 @@ public class AudioManager : MonoBehaviour {
     public void Play (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
+        Debug.Log(s);
         s.source.Play();
     }
 
@@ -49,3 +54,4 @@ public class AudioManager : MonoBehaviour {
         audioMixer.SetFloat("musicVolume", musicVolume);
     }
 }
+    

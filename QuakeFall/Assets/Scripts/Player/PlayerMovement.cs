@@ -15,6 +15,7 @@ namespace Player
 
 		private Rigidbody _rigidBody;
         private AudioManager _audioManager;
+        private AudioManager _sfxManager;
 		private int _jumpCount;
 
 		public void ChangeJumpCount(int amount)
@@ -31,7 +32,8 @@ namespace Player
 		private void Awake()
 		{
 			_rigidBody = GetComponent<Rigidbody>();
-            _audioManager = FindObjectOfType<AudioManager>();
+            _audioManager = GameObject.Find("MusicVolumeManager").GetComponent<AudioManager>();
+            _sfxManager = GameObject.Find("SFXVolumeManager").GetComponent<AudioManager>();
 
         }
 
@@ -80,7 +82,7 @@ namespace Player
 				
 				var newForce = Vector3.up * _jumpForce;
 				_rigidBody.AddForce(newForce);
-                _audioManager.Play("Jump");
+                _sfxManager.Play("Jump");
             }
 		}
 
