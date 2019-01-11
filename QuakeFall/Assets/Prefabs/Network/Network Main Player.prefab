@@ -1671,6 +1671,7 @@ MonoBehaviour:
   Ammo: 999
   FireRate: 1
   GunEnd: {fileID: 4587274933587262}
+  Player: {fileID: 0}
   _projectilePrefab: {fileID: 1924529434647614, guid: 557f474fd8fff4d4083df4c7eea256ab,
     type: 2}
   _initialForce: 200
@@ -1740,6 +1741,7 @@ MonoBehaviour:
   _activeWeapon: 0
   _previousWeapon: 0
   _inventory:
+  - {fileID: 114547886682962028}
   - {fileID: 114547886682962028}
   _swapToPickup: 0
 --- !u!114 &114752162484955834
