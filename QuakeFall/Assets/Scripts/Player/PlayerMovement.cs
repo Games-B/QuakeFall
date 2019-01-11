@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Player
 {
 	[RequireComponent(typeof(Rigidbody))]
-	public class PlayerMovement : MonoBehaviour
+	public class PlayerMovement : NetworkBehaviour
 	{
 		[SerializeField] private float _jumpForce;
 		[SerializeField] private float _walkSpeed, _runSpeed;
@@ -35,7 +36,7 @@ namespace Player
 			// Stop the player jumping at the start until he touches the floor.
 			_jumpCount = _maxJumps;
 		}
-
+		
 		private void FixedUpdate()
 		{
 			// Get input from the player.
@@ -55,7 +56,7 @@ namespace Player
 
 				// Reset the current vertical velocity.
 				_rigidBody.velocity = new Vector3(_rigidBody.velocity.x, 0, _rigidBody.velocity.z);
-				
+
 				var newForce = Vector3.up * _jumpForce;
 				_rigidBody.AddForce(newForce);
 			}
