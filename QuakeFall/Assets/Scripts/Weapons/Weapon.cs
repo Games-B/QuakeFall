@@ -10,8 +10,6 @@ namespace Weapons
 		[SerializeField] protected int Ammo;
 		[SerializeField] protected float FireRate;
 		[SerializeField] protected Transform GunEnd;
-		[SerializeField] protected Transform Player;
-		
 		private float _timeSinceShot;
 		
 		// Custom methods.
@@ -19,7 +17,13 @@ namespace Weapons
 		{
 			// Don't shoot if enough time has not passed or you don't have enough ammo or you don't have the weapon.
 			if (_timeSinceShot < FireRate || Ammo < 1)
-			{				
+			{
+				// Print error message.
+				if (_timeSinceShot < FireRate)
+					print(string.Format("<color=red>Need to wait {0} before shooting!</color>",
+						FireRate - _timeSinceShot));
+				if (Ammo < 1) print("<color=red>No ammo to shoot with!</color>");
+				
 				targetPoint = Vector3.zero;
 				hit = new RaycastHit();
 				return false;
@@ -36,9 +40,8 @@ namespace Weapons
 			}
 			else
 			{
-				targetPoint = targetCamera.transform.position + targetCamera.transform.forward * Range;
+				targetPoint = targetCamera.transform.forward * Range;
 			}
-			
 			return true;
 		}
 

@@ -9,13 +9,7 @@ namespace Weapons
 		[SerializeField] private float _explosionRange;
 		[SerializeField] private float _explosionForce;
 		[SerializeField] private float _lifespan;
-		[SerializeField] private Transform _parent;
 
-		public void SetParent(Transform newParent)
-		{
-			_parent = newParent;
-		}
-		
 		private float _currentLifespan;
 
 		private void Update()
@@ -28,21 +22,19 @@ namespace Weapons
 			}
 		}
 
-		private void OnCollisionEnter(Collision other)
+		private void OnCollisionEnter()
 		{
-			// Don't collide with the player.
-			if (other.transform == _parent) return;
-			
 			// Get all the objects in the range of the explosion.
 			var colliderArray = Physics.OverlapSphere(transform.position, _explosionRange);
 			
 			// Go through all the objects.
 			foreach (var coll in colliderArray)
 			{
-				print(coll);
+				
 				// Hurt the object if it's a player.
 				if (coll.CompareTag("Player"))
 				{
+					print(string.Format("<color=yellow>{0}</color>", coll.gameObject));
 					coll.GetComponent<PlayerHealth>().Hurt(_damage);
 					coll.GetComponent<Rigidbody>().AddForce((coll.transform.position - transform.position).normalized * _explosionForce);
 				}
@@ -50,6 +42,7 @@ namespace Weapons
 				// Push the object back if it has a rigid body.
 				else if (coll.GetComponent<Rigidbody>() != null)
 				{
+					print(string.Format("<color=green>{0}</color>", coll.gameObject));
 					coll.GetComponent<Rigidbody>().AddExplosionForce(_explosionForce, transform.position, _explosionRange);
 				}
 			}
