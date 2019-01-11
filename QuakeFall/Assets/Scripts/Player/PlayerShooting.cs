@@ -15,7 +15,6 @@ namespace Player
 				Vector3 targetPoint;
 				RaycastHit hit;
 				_arsenal.GetActiveWeapon().Shoot(_targetCamera, out targetPoint, out hit);
-				print(targetPoint);
 			}
 		}
 	}
