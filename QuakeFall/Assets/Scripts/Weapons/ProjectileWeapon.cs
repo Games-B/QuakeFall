@@ -9,7 +9,10 @@ namespace Weapons
 
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
-			if (!base.Shoot(targetCamera, out targetPoint, out hit)) return false;
+			if (! base.Shoot(targetCamera, out targetPoint, out hit))
+			{
+				return false;
+			}
 			
 			var newProjectile = Instantiate(_projectilePrefab, GunEnd.position, Quaternion.identity, null);
 			
