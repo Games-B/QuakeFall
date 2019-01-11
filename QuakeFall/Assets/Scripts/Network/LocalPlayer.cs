@@ -16,9 +16,9 @@ namespace Network
 			if (!isLocalPlayer) return;
 
 			// Enable all player components.
-			foreach (var component in _playerComponents)
+			foreach (var behaviour in _playerComponents)
 			{
-				component.enabled = true;
+				behaviour.enabled = true;
 			}
 		}
 	}
