@@ -444,7 +444,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1353644663}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.88299894, y: -0.0009999275, z: 0.79200006}
+  m_LocalPosition: {x: 0.88, y: 0, z: 0.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1378288593}
@@ -460,9 +460,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1353644663}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ea1cdbaeabca734ca35a15dbde04e5c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f241e627f814d745a53582fd5b068fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 --- !u!114 &1353644666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +479,11 @@ MonoBehaviour:
   _range: 0
   _ammo: 0
   _fpsCam: {fileID: 782301080}
+=======
+  _aimDownSight: {x: 0, y: -0.03, z: 0.79}
+  _hipFire: {x: 0.88, y: 0, z: 0.79}
+  _speed: 0.15
+>>>>>>> master
 --- !u!1001 &1373625652
 Prefab:
   m_ObjectHideFlags: 0

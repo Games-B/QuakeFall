@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 46b14c3a65a86714497297514bbb3e1c
+guid: ca3915480cb121740a64dcd47e095179
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: humanBody_0
-    100002: //RootNode
-    400000: humanBody_0
-    400002: //RootNode
-    2100000: humanBody_0Mat
-    2300000: humanBody_0
-    3300000: humanBody_0
-    4300000: humanBody_0
+    100000: //RootNode
+    100002: Robot_1
+    400000: //RootNode
+    400002: Robot_1
+    2100000: Robot_1Mat
+    2300000: Robot_1
+    3300000: Robot_1
+    4300000: Robot_1
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -48,8 +48,8 @@ ModelImporter:
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importCameras: 0
+    importLights: 0
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
