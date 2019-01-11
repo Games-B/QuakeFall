@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 114187105594747776}
   - component: {fileID: 114752162484955834}
   m_Layer: 0
-  m_Name: Network Main Player
+  m_Name: Network Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1627,10 +1627,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ef5748986ce8f499fbac7483638289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _componentsToDisableOnDeath: []
   _maxHealth: 100
   _currentHealth: 100
   _maxShield: 100
   _currentShield: 100
+  _reSpawnTime: 0
 --- !u!114 &114496127971874874
 MonoBehaviour:
   m_ObjectHideFlags: 1
