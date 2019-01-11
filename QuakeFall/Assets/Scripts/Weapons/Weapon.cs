@@ -10,7 +10,9 @@ namespace Weapons
 		[SerializeField] protected int Ammo;
 		[SerializeField] protected float FireRate;
 		[SerializeField] protected Transform GunEnd;
-		[SerializeField] private float _timeSinceShot;
+		[SerializeField] protected Transform Player;
+		
+		private float _timeSinceShot;
 		
 		// Custom methods.
 		public virtual bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
@@ -35,10 +37,8 @@ namespace Weapons
 			else
 			{
 				targetPoint = targetCamera.transform.position + targetCamera.transform.forward * Range;
-				print(targetPoint);
 			}
 			
-			Debug.DrawLine(rayOrigin, targetPoint, Color.cyan, 2);
 			return true;
 		}
 

@@ -19,6 +19,7 @@ namespace Weapons
 			// Point it towards the target object.
 			newProjectile.transform.LookAt(targetPoint);
 			newProjectile.GetComponent<Rigidbody>().AddForce(newProjectile.transform.forward * _initialForce);
+			newProjectile.GetComponent<Projectile>().SetParent(Player);
 			return true;
 		}
 	}
