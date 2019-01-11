@@ -275,11 +275,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114529834926047882, guid: 9d046e76cfcb01a4a81b1c48d72be89d,
-        type: 2}
-      propertyPath: m_OfflineScene
-      value: MainMenuTest
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d046e76cfcb01a4a81b1c48d72be89d, type: 2}
   m_IsPrefabAsset: 0
