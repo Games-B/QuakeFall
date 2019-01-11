@@ -8,7 +8,7 @@ public class HostGame : MonoBehaviour
 
 	[SerializeField] private string _roomName;
 
-	[SerializeField] private NetworkManager _networkManager;
+	private NetworkManager _networkManager;
 
 	private void Start()
 	{
