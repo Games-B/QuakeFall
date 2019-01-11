@@ -32,7 +32,7 @@ namespace Player
 			var amountToHurt = Mathf.Clamp(amount, 0, _currentHealth);
 			_currentHealth -= amountToHurt;
 			
-			// Check if the player should die.
+			// Check if the player should die.    
 			if (_currentHealth <= 0)
 			{
 				Die();
