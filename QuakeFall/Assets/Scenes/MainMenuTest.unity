@@ -4698,9 +4698,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fovSlider: {fileID: 1900062616}
-  HudManager: {fileID: 0}
-  MapManager: {fileID: 0}
-  EnemyHealth: {fileID: 0}
 --- !u!1 &1246865920
 GameObject:
   m_ObjectHideFlags: 0
@@ -7003,9 +7000,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fovSlider: {fileID: 0}
-  HudManager: {fileID: 0}
-  MapManager: {fileID: 0}
-  EnemyHealth: {fileID: 0}
 --- !u!1 &1900062614
 GameObject:
   m_ObjectHideFlags: 0
