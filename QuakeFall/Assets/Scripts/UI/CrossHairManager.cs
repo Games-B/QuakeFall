@@ -5,17 +5,20 @@ namespace UI
 {
 	public class CrossHairManager : MonoBehaviour
 	{
+		// Private fields.
 		[SerializeField] private Sprite _crossHairImage;
 		[SerializeField] private Color _crossHairFill;
 		[SerializeField] private RectTransform[] _transforms;
-		[Space, SerializeField] private int _dotWidth;
-		[SerializeField] private int _lineWidth, _lineHeight, _lineDistance;
+		[Space]
+		[SerializeField] private int _dotWidth, _lineWidth, _lineHeight, _lineDistance;
 
+		// Unity Methods.
 		private void Update()
 		{
 			UpdateStyle();
 		}
 
+		// Custom Methods.
 		private void UpdateStyle()
 		{
 			// Change the sprite and colour of all the elements.
