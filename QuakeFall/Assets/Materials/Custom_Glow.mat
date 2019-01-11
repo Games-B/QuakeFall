@@ -27,7 +27,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _RimPower: 1.67
+    - _ColorTransparency: 0
+    - _RimPower: 1.5
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _RimColour: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 0.5803922}
+    - _RimColour: {r: 0.031372547, g: 1, b: 0.92937386, a: 0}

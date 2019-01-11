@@ -7,10 +7,8 @@ namespace Player
 	public class PlayerMovement : NetworkBehaviour
 	{
 		[SerializeField] private float _jumpForce;
-		[SerializeField] private float _acceleration;
-		[SerializeField] private float _maxHorizontalVelocity;
+		[SerializeField] private float _walkSpeed, _runSpeed;
 		[SerializeField] private int _maxJumps;
-		[SerializeField, Range(0, 1)] private float _stopSpeed = .5f;
 
 		[SerializeField] private Transform _camera;
 
@@ -45,29 +43,12 @@ namespace Player
 			var horizontal = Input.GetAxis("Horizontal");
 			var vertical = Input.GetAxis("Vertical");
 
-			// Check if the can move.
-			var totalInput = Mathf.Abs(_rigidBody.velocity.x) + Mathf.Abs(_rigidBody.velocity.z);
-			if (totalInput < _maxHorizontalVelocity)
-			{
-				var horizontalVelocity = _camera.right * horizontal;
-
-				// Ignore the y axis when moving forward, as it can make the player fly up.
-				var forwardVector = new Vector3(_camera.forward.x, 0, _camera.forward.z).normalized;
-				var verticalVelocity = forwardVector * vertical;
-
-				var newForce = (horizontalVelocity + verticalVelocity) * _acceleration;
-				_rigidBody.AddForce(newForce);
-			}
-			// Stop the player if he isn't moving.
-			else if (totalInput <= 0)
-			{
-				// Stop the horizontal velocities, without affecting the vertical velocity.
-				var stopVector = Vector3.up * _rigidBody.velocity.y;
-
-				// Smoothly slow down the player.
-				_rigidBody.velocity = Vector3.Lerp(_rigidBody.velocity, stopVector, _stopSpeed);
-			}
-
+			var currentAcceleration = Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
+			var forwardVector = transform.forward * vertical * currentAcceleration;
+			var rightVector = transform.right * horizontal * currentAcceleration;
+			var targetPosition = transform.position + forwardVector + rightVector;
+			_rigidBody.MovePosition(targetPosition);
+			
 			// Check if the player can jump.
 			if (_jumpCount < _maxJumps && Input.GetKeyDown(KeyCode.Space))
 			{
