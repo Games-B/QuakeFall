@@ -619,7 +619,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4056442691437432}
-  - component: {fileID: 114226208119571568}
   - component: {fileID: 114859298734027598}
   m_Layer: 0
   m_Name: Boopgun
@@ -1783,22 +1782,6 @@ MonoBehaviour:
   _currentHealth: 100
   _maxShield: 100
   _currentShield: 100
-  _reSpawnTime: 0
---- !u!114 &114488275607421606
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1722971020032806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b9d66bc54d5aed45becc89ea3a88772, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _x: 1
-  _y: 1
-  _z: 0
-  _target: {fileID: 4953077157212550}
 --- !u!114 &114650858068649572
 MonoBehaviour:
   m_ObjectHideFlags: 1

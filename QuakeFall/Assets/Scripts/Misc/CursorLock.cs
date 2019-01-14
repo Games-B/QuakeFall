@@ -4,9 +4,14 @@ namespace Misc
 {
 	public class CursorLock : MonoBehaviour
 	{
-		private void Awake()
+		private void OnEnable()
 		{
 			Cursor.lockState = CursorLockMode.Locked;
+		}
+
+		private void OnDisable()
+		{
+			Cursor.lockState = CursorLockMode.None;
 		}
 	}
 }
