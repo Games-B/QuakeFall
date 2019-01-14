@@ -1605,7 +1605,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1722971020032806}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0b9d66bc54d5aed45becc89ea3a88772, type: 3}
   m_Name: 
@@ -1683,7 +1683,6 @@ MonoBehaviour:
   - {fileID: 223639640965706596}
   - {fileID: 114050747594916800}
   - {fileID: 114435770850304860}
-  - {fileID: 114020193665306130}
 --- !u!114 &114156685374843150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1898,7 +1897,7 @@ MonoBehaviour:
   Ammo: 999
   FireRate: 1
   GunEnd: {fileID: 4890546750306838}
-  _projectilePrefab: {fileID: 1924529434647614, guid: 557f474fd8fff4d4083df4c7eea256ab,
+  _projectilePrefab: {fileID: 1924529434647614, guid: 05eea1d4faf879c45aa6172526ec72c9,
     type: 2}
   _initialForce: 200
 --- !u!114 &114859915629477818

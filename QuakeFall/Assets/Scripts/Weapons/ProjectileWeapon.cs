@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Weapons
 {
@@ -16,6 +17,7 @@ namespace Weapons
 			// Point it towards the target object.
 			newProjectile.transform.LookAt(targetPoint);
 			newProjectile.GetComponent<Rigidbody>().AddForce(newProjectile.transform.forward * _initialForce);
+			NetworkServer.Spawn(newProjectile);
 			return true;
 		}
 	}
