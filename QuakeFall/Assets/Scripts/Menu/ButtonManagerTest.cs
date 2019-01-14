@@ -14,6 +14,7 @@ namespace Menu
 		public GameObject GraphicsPanel;
 		public GameObject SoundPanel;
 		public GameObject QuitAlert;
+		
 
 
 		// Use this for initialization
@@ -22,6 +23,7 @@ namespace Menu
 			OptionsPanel.SetActive(false);
 			GraphicsPanel.SetActive(false);
 			SoundPanel.SetActive(false);
+			
 		}
 
 		// Update is called once per frame
@@ -33,7 +35,10 @@ namespace Menu
 		public void Options()
 		{
 			OptionsPanel.SetActive(true);
+	
 		}
+		
+		
 
 		public void Gameplay()
 		{
@@ -59,6 +64,9 @@ namespace Menu
 		public void BackSettingsPanel()
 		{
 			OptionsPanel.SetActive(false);
+			GraphicsPanel.SetActive(false);
+			GameplayPanel.SetActive(false);
+			SoundPanel.SetActive(false);
 		}
 
 		public void QuitConfirmation()
