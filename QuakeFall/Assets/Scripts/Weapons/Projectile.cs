@@ -34,7 +34,6 @@ namespace Weapons
 				// Hurt the object if it's a player.
 				if (coll.CompareTag("Player"))
 				{
-					print(string.Format("<color=yellow>{0}</color>", coll.gameObject));
 					coll.GetComponent<PlayerHealth>().Hurt(_damage);
 					coll.GetComponent<Rigidbody>().AddForce((coll.transform.position - transform.position).normalized * _explosionForce);
 				}
@@ -42,7 +41,6 @@ namespace Weapons
 				// Push the object back if it has a rigid body.
 				else if (coll.GetComponent<Rigidbody>() != null)
 				{
-					print(string.Format("<color=green>{0}</color>", coll.gameObject));
 					coll.GetComponent<Rigidbody>().AddExplosionForce(_explosionForce, transform.position, _explosionRange);
 				}
 			}
