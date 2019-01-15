@@ -155,7 +155,7 @@ MonoBehaviour:
     i14: 114
     i15: 201
   m_ServerOnly: 0
-  m_LocalPlayerAuthority: 1
+  m_LocalPlayerAuthority: 0
 --- !u!114 &114457282546234980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -169,8 +169,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _damage: 60
   _explosionRange: 30
-  _explosionForce: 1000
-  _upwardsForce: 1000
+  _explosionForce: 500
+  _upwardsForce: 500
   _lifespan: 10
 --- !u!135 &135580278966968522
 SphereCollider:

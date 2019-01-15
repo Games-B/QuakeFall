@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Weapons
 {
@@ -10,6 +11,7 @@ namespace Weapons
 		[SerializeField] protected int Ammo;
 		[SerializeField] protected float FireRate;
 		[SerializeField] protected Transform GunEnd;
+		[SerializeField] protected GameObject Player;
 		private float _timeSinceShot;
 		
 		// Custom methods.
