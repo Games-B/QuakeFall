@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 23531387050942876}
   - component: {fileID: 64345523108425146}
   - component: {fileID: 54411643306344282}
+  - component: {fileID: 114758127154673488}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Untagged
@@ -233,6 +234,38 @@ MonoBehaviour:
   _horizontal: 5
   _vertical: 2
   _eulerAngle: {x: 0, y: 0, z: 0}
+--- !u!114 &114758127154673488
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1587670996940122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 87
+    i1: 75
+    i2: 86
+    i3: 150
+    i4: 114
+    i5: 13
+    i6: 142
+    i7: 132
+    i8: 138
+    i9: 16
+    i10: 53
+    i11: 19
+    i12: 175
+    i13: 147
+    i14: 173
+    i15: 148
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114878085721589630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -256,10 +289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _jumpForce: 300
-  _acceleration: 20
-  _maxHorizontalVelocity: 10
+  _walkSpeed: 0
+  _runSpeed: 0
   _maxJumps: 2
-  _stopSpeed: 0.5
   _camera: {fileID: 4862795064439116}
 --- !u!114 &114999021514699872
 MonoBehaviour:
