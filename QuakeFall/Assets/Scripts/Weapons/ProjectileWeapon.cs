@@ -8,6 +8,12 @@ namespace Weapons
 		[Header("Projectile Weapon"), SerializeField] private GameObject _projectilePrefab;
 		[SerializeField] private float _initialForce;
 
+		[Command]
+		public void CmdSpawn(GameObject item)
+		{
+			NetworkServer.Spawn(item);
+		}
+		
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
 			if (!base.Shoot(targetCamera, out targetPoint, out hit)) return false;
@@ -17,7 +23,7 @@ namespace Weapons
 			// Point it towards the target object.
 			newProjectile.transform.LookAt(targetPoint);
 			newProjectile.GetComponent<Rigidbody>().AddForce(newProjectile.transform.forward * _initialForce);
-			NetworkServer.Spawn(newProjectile);
+			CmdSpawn(newProjectile);
 			return true;
 		}
 	}

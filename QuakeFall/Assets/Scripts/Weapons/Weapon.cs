@@ -3,7 +3,7 @@ using UnityEngine.Networking;
 
 namespace Weapons
 {
-	public class Weapon : MonoBehaviour
+	public class Weapon : NetworkBehaviour
 	{
 		[Header("Weapon"), SerializeField] protected string Name;
 		[SerializeField] protected Sprite Icon;
