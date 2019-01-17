@@ -35,17 +35,24 @@ namespace Menu
 		public void HostGameSection()
 		{
 			HostGamePanel.SetActive(true);
+
+			if 
+
+
+
 		}
 
 		public void JoinGameSection()
 		{
 			JoinGamePanel.SetActive(true);
+			
 		}
 	
 
 		public void Options()
 		{
 			OptionsPanel.SetActive(true);
+			
 		}
 
 
