@@ -31,7 +31,16 @@ namespace Menu
 		{
 
 		}
-		
+
+		public void HostGameSection()
+		{
+			HostGamePanel.SetActive(true);
+		}
+
+		public void JoinGameSection()
+		{
+			JoinGamePanel.SetActive(true);
+		}
 	
 
 		public void Options()
@@ -43,6 +52,8 @@ namespace Menu
 		public void BackSettingsPanel()
 		{
 			OptionsPanel.SetActive(false);
+			JoinGamePanel.SetActive(false);
+			HostGamePanel.SetActive(false);
 		}
 
 

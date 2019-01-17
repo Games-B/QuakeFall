@@ -3567,6 +3567,7 @@ GameObject:
   - component: {fileID: 963028365}
   - component: {fileID: 963028363}
   - component: {fileID: 963028362}
+  - component: {fileID: 963028364}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -3632,6 +3633,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 963028360}
   m_CullTransparentMesh: 0
+--- !u!114 &963028364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 963028360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4577099863eb5b1499bdbabee2b2e1f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HostGamePanel: {fileID: 438223196}
+  JoinGamePanel: {fileID: 1750528815}
+  OptionsPanel: {fileID: 1114636191}
+  QuitAlert: {fileID: 0}
 --- !u!114 &963028365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3862,7 +3878,6 @@ GameObject:
   - component: {fileID: 1114636196}
   - component: {fileID: 1114636195}
   - component: {fileID: 1114636194}
-  - component: {fileID: 1114636193}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -3894,20 +3909,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 493.5, y: 648.7}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1114636193
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1114636191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc32f2aa40a47d442b8e38907b0c2c43, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _networkManager: {fileID: 193143994}
-  _ipAddress: 192.168.0.1
-  _port: 7777
 --- !u!114 &1114636194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4197,7 +4198,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1150906989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963028364}
+        m_MethodName: JoinGameSection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1150906989
@@ -4332,7 +4344,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1162653061}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963028364}
+        m_MethodName: Options
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1162653061
@@ -5433,7 +5456,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1648519696}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 963028364}
+        m_MethodName: HostGameSection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1648519699
@@ -5674,7 +5708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 100, y: 0}
+  m_AnchoredPosition: {x: 52, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1756772370
