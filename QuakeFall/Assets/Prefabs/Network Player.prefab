@@ -560,6 +560,7 @@ GameObject:
   - component: {fileID: 136143936072528972}
   - component: {fileID: 114410999880370560}
   - component: {fileID: 114971198576061930}
+  - component: {fileID: 114082918020944792}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Player
@@ -1630,6 +1631,17 @@ MonoBehaviour:
   _inventory:
   - {fileID: 114859298734027598}
   _swapToPickup: 0
+--- !u!114 &114082918020944792
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799108290675578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17364de4f8653de45b1381b3f065fd19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114118152015122720
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1897,10 +1909,10 @@ MonoBehaviour:
   Ammo: 999
   FireRate: 1
   GunEnd: {fileID: 4890546750306838}
-  Player: {fileID: 1799108290675578}
-  _projectilePrefab: {fileID: 1924529434647614, guid: 05eea1d4faf879c45aa6172526ec72c9,
-    type: 2}
+  Player: {fileID: 0}
+  _prefabIndex: 0
   _initialForce: 200
+  _networkCommands: {fileID: 114082918020944792}
 --- !u!114 &114859915629477818
 MonoBehaviour:
   m_ObjectHideFlags: 1
