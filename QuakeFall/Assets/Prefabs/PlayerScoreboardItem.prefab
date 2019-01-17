@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 222895810708519512}
   - component: {fileID: 114755493809877476}
   - component: {fileID: 114981926488759346}
+  - component: {fileID: 114662647055571080}
   m_Layer: 5
   m_Name: Username
   m_TagString: Untagged
@@ -92,6 +93,7 @@ GameObject:
   - component: {fileID: 222843751752648494}
   - component: {fileID: 114451911403137296}
   - component: {fileID: 114938517611030884}
+  - component: {fileID: 114896582971887784}
   m_Layer: 5
   m_Name: Kills
   m_TagString: Untagged
@@ -192,6 +194,19 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114662647055571080
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1689593537531040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!114 &114674700894963426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -277,6 +292,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Deaths:'
+--- !u!114 &114896582971887784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894002144943646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1741964061, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 2
+  m_VerticalFit: 2
 --- !u!114 &114938517611030884
 MonoBehaviour:
   m_ObjectHideFlags: 1
