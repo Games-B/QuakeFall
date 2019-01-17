@@ -38,10 +38,6 @@ namespace Menu
 		{
 			HostGamePanel.SetActive(true);
 
-			if 
-
-
-
 		}
 
 		public void JoinGameSection()
