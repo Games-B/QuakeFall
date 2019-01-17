@@ -9,21 +9,21 @@ namespace Menu
 	public class ButtonManagerTest : MonoBehaviour
 	{
 
+		public GameObject HostGamePanel;
+		public GameObject JoinGamePanel;
 		public GameObject OptionsPanel;
-		public GameObject GameplayPanel;
-		public GameObject GraphicsPanel;
-		public GameObject SoundPanel;
 		public GameObject QuitAlert;
-		
+
 
 
 		// Use this for initialization
 		void Start()
 		{
+			HostGamePanel.SetActive(false);
+			JoinGamePanel.SetActive(false);
 			OptionsPanel.SetActive(false);
-			GraphicsPanel.SetActive(false);
-			SoundPanel.SetActive(false);
-			
+
+
 		}
 
 		// Update is called once per frame
@@ -31,57 +31,37 @@ namespace Menu
 		{
 
 		}
+		
+	
 
 		public void Options()
 		{
 			OptionsPanel.SetActive(true);
-	
-		}
-		
-		
-
-		public void Gameplay()
-		{
-			GameplayPanel.SetActive(true);
-			GraphicsPanel.SetActive(false);
-			SoundPanel.SetActive(false);
 		}
 
-		public void Graphics()
-		{
-			GraphicsPanel.SetActive(true);
-			GameplayPanel.SetActive(false);
-			SoundPanel.SetActive(false);
-		}
-
-		public void Sound()
-		{
-			SoundPanel.SetActive(true);
-			GraphicsPanel.SetActive(false);
-			GameplayPanel.SetActive(false);
-		}
 
 		public void BackSettingsPanel()
 		{
 			OptionsPanel.SetActive(false);
-			GraphicsPanel.SetActive(false);
-			GameplayPanel.SetActive(false);
-			SoundPanel.SetActive(false);
 		}
+
+
 
 		public void QuitConfirmation()
-		{
-			QuitAlert.SetActive(true);
-		}
+			{
+				QuitAlert.SetActive(true);
+			}
 
-		public void CancelQuit()
-		{
-			QuitAlert.SetActive(false);
-		}
+			public void CancelQuit()
+			{
+				QuitAlert.SetActive(false);
+			}
 
-		public void ConfirmQuit()
-		{
-			Application.Quit();
+			public void ConfirmQuit()
+			{
+				Application.Quit();
+			}
 		}
 	}
-}
+	
+	
