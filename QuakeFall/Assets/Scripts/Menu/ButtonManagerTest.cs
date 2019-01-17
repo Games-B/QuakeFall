@@ -12,6 +12,7 @@ namespace Menu
 		public GameObject HostGamePanel;
 		public GameObject JoinGamePanel;
 		public GameObject OptionsPanel;
+        public GameObject AudioSettingsPanel;
 		public GameObject QuitAlert;
 
 
@@ -22,6 +23,7 @@ namespace Menu
 			HostGamePanel.SetActive(false);
 			JoinGamePanel.SetActive(false);
 			OptionsPanel.SetActive(false);
+            AudioSettingsPanel.SetActive(false);
 
 
 		}
@@ -49,12 +51,19 @@ namespace Menu
 		}
 
 
-		public void BackSettingsPanel()
+        public void AudioPanel()
+        {
+            AudioSettingsPanel.SetActive(true);
+        }
+
+
+        public void BackSettingsPanel()
 		{
 			OptionsPanel.SetActive(false);
 			JoinGamePanel.SetActive(false);
 			HostGamePanel.SetActive(false);
-		}
+            AudioSettingsPanel.SetActive(false);
+        }
 
 
 
