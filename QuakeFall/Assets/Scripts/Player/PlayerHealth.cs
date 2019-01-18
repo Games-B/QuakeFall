@@ -8,7 +8,6 @@ namespace Player
 	public class PlayerHealth : NetworkBehaviour
 	{
 		[SerializeField] private float _respawnTime;
-		[SerializeField] private Behaviour[] _componentsToDisable;
 		[SerializeField] private bool _isDead;
 
 		private float _timeUntilReSpawn;
@@ -18,6 +17,12 @@ namespace Player
 
 		[SerializeField, Range(0, 1000)] private int _maxShield;
 		[SerializeField] private int _currentShield;
+		
+		[Header("Components To Disable"), SerializeField] private Behaviour[] _componentArray;
+		[SerializeField] private MeshRenderer _meshRenderer;
+		[SerializeField] private CapsuleCollider _capsuleCollider;
+		[SerializeField] private GameObject _weapons;
+		
 
 		private void Update()
 		{
@@ -34,7 +39,7 @@ namespace Player
 		private void Heal(int amount)
 		{
 			// Work out the amount to heal, and clamp it to prevent over healing.
-			var amountToHeal = Mathf.Clamp(amount, 0, _currentHealth - _maxHealth);
+			var amountToHeal = Mathf.Clamp(amount, 0, _maxHealth - _currentHealth);
 			_currentHealth += amountToHeal;
 		}
 
@@ -80,7 +85,11 @@ namespace Player
 			print("U dEd PhAm!");
 			_timeUntilReSpawn = _respawnTime;
 			_isDead = true;
-			foreach (var behaviour in _componentsToDisable)
+			// Disable all the components.
+			_meshRenderer.enabled = false;
+			_capsuleCollider.enabled = false;
+			_weapons.SetActive(false);
+			foreach (var behaviour in _componentArray)
 			{
 				behaviour.enabled = false;
 			}
@@ -94,7 +103,11 @@ namespace Player
 			var positionArray = NetworkManager.singleton.startPositions;
 			var randomIndex = Random.Range(0, positionArray.Count);
 			transform.position = positionArray[randomIndex].position;
-			foreach (var behaviour in _componentsToDisable)
+			// Enable all the components.
+			_meshRenderer.enabled = true;
+			_capsuleCollider.enabled = true;
+			_weapons.SetActive(true);
+			foreach (var behaviour in _componentArray)
 			{
 				behaviour.enabled = true;
 			}

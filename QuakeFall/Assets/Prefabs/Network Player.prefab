@@ -572,8 +572,8 @@ GameObject:
   - component: {fileID: 114859915629477818}
   - component: {fileID: 114872456651501404}
   - component: {fileID: 114118152015122720}
-  - component: {fileID: 33144188029677392}
   - component: {fileID: 23731687638628474}
+  - component: {fileID: 33144188029677392}
   - component: {fileID: 54556583053155798}
   - component: {fileID: 136143936072528972}
   - component: {fileID: 114410999880370560}
@@ -1923,10 +1923,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ef5748986ce8f499fbac7483638289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _respawnTime: 5
+  _isDead: 0
   _maxHealth: 100
   _currentHealth: 100
   _maxShield: 100
   _currentShield: 100
+  _componentArray:
+  - {fileID: 114423650946227136}
+  - {fileID: 114859915629477818}
+  - {fileID: 20070933643722440}
+  - {fileID: 114435770850304860}
+  - {fileID: 114020193665306130}
+  - {fileID: 223639640965706596}
+  _meshRenderer: {fileID: 23731687638628474}
+  _capsuleCollider: {fileID: 136143936072528972}
+  _weapons: {fileID: 1722971020032806}
 --- !u!114 &114650858068649572
 MonoBehaviour:
   m_ObjectHideFlags: 1
