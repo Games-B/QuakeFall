@@ -3,12 +3,12 @@
 --- !u!128 &12800000
 Font:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: willowbody_copy
   serializedVersion: 5
   m_LineSpacing: 89.375
-  m_DefaultMaterial: {fileID: 2100000, guid: 68a974d873590254482c942280f3ff2a, type: 2}
+  m_DefaultMaterial: {fileID: 2100000, guid: 74d3d6a572f767f4c9326944a0b32d26, type: 2}
   m_FontSize: 64
   m_Texture: {fileID: 2800000, guid: 97f6533c9e47bd34d92ce661abc3feed, type: 3}
   m_AsciiStartOffset: 0
@@ -5132,3 +5132,4 @@ Font:
   m_FallbackFonts: []
   m_FontRenderingMode: 0
   m_UseLegacyBoundsCalculation: 0
+  m_ShouldRoundAdvanceValue: 1
