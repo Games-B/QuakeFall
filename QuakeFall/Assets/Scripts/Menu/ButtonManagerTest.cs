@@ -14,6 +14,9 @@ namespace Menu
 		public GameObject OptionsPanel;
         public GameObject AudioSettingsPanel;
 		public GameObject QuitAlert;
+		private bool _isShowingHost;
+		private bool _isShowingJoin;
+		private bool _isShowingOptions;
 
 
 
@@ -36,20 +39,24 @@ namespace Menu
 
 		public void HostGameSection()
 		{
-			HostGamePanel.SetActive(true);
+			_isShowingHost = !_isShowingHost;
+			HostGamePanel.SetActive(_isShowingHost);
+		
 
 		}
 
 		public void JoinGameSection()
 		{
-			JoinGamePanel.SetActive(true);
+			_isShowingJoin = !_isShowingJoin;
+			JoinGamePanel.SetActive(_isShowingJoin);
 			
 		}
 	
 
 		public void Options()
 		{
-			OptionsPanel.SetActive(true);
+			_isShowingOptions = !_isShowingOptions;
+			OptionsPanel.SetActive(_isShowingOptions);
 			
 		}
 

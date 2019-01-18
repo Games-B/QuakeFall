@@ -2324,7 +2324,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 64
+    m_MaxSize: 76
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -2702,6 +2702,7 @@ GameObject:
   - component: {fileID: 438223200}
   - component: {fileID: 438223199}
   - component: {fileID: 438223198}
+  - component: {fileID: 438223202}
   m_Layer: 5
   m_Name: Host Game
   m_TagString: Untagged
@@ -2799,6 +2800,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!111 &438223202
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 438223196}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &488760923
 GameObject:
   m_ObjectHideFlags: 0
@@ -3655,6 +3671,7 @@ GameObject:
   - component: {fileID: 769454380}
   - component: {fileID: 769454379}
   - component: {fileID: 769454378}
+  - component: {fileID: 769454381}
   m_Layer: 5
   m_Name: Audio Panel
   m_TagString: Untagged
@@ -3741,6 +3758,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!111 &769454381
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769454376}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &809380013
 GameObject:
   m_ObjectHideFlags: 0
@@ -5515,6 +5547,7 @@ GameObject:
   - component: {fileID: 1162653061}
   - component: {fileID: 1162653060}
   - component: {fileID: 1162653059}
+  - component: {fileID: 1162653063}
   m_Layer: 5
   m_Name: Options
   m_TagString: Untagged
@@ -5649,6 +5682,21 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1162653057}
   m_CullTransparentMesh: 0
+--- !u!111 &1162653063
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162653057}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1208701441
 GameObject:
   m_ObjectHideFlags: 0
@@ -7718,6 +7766,7 @@ GameObject:
   - component: {fileID: 1750528818}
   - component: {fileID: 1750528817}
   - component: {fileID: 1750528819}
+  - component: {fileID: 1750528821}
   m_Layer: 5
   m_Name: Join Game
   m_TagString: Untagged
@@ -7817,6 +7866,21 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
   m_ChildControlHeight: 1
+--- !u!111 &1750528821
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1750528815}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1755732053
 GameObject:
   m_ObjectHideFlags: 0
