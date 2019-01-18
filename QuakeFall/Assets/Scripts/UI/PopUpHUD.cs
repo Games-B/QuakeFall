@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class PopUpHUD : MonoBehaviour
@@ -7,12 +8,6 @@ public class PopUpHUD : MonoBehaviour
 
 	public GameObject InGameHUD;
 	private bool _isShowing;
-
-	// Use this for initialization
-	void Start ()
-	{
-
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -21,9 +16,12 @@ public class PopUpHUD : MonoBehaviour
 		{
 			_isShowing = !_isShowing;
 			InGameHUD.SetActive(_isShowing);
-		} 
-		
+		}
 	
-		
+	}
+
+	public void ExitGame()
+	{
+		Application.Quit();
 	}
 }
