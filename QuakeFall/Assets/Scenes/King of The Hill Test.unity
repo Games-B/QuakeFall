@@ -368,7 +368,7 @@ MonoBehaviour:
   _text1: {fileID: 1536070562}
   _bonusMultiplier: 5
   _passiveMultiplier: 0
-  _passiveIncrease: 0.01
+  _passiveIncrease: 1e-11
 --- !u!136 &801127712
 CapsuleCollider:
   m_ObjectHideFlags: 0
