@@ -126,8 +126,9 @@ GameObject:
   - component: {fileID: 34504968}
   - component: {fileID: 34504967}
   - component: {fileID: 34504972}
+  - component: {fileID: 34504973}
   m_Layer: 5
-  m_Name: Main Canvas
+  m_Name: Pop Up HUD Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,6 +244,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &34504973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 34504966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a129a435adc5b147a8c4c025c426ee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InGameHUD: {fileID: 1425242168}
 --- !u!1 &70866672
 GameObject:
   m_ObjectHideFlags: 0
