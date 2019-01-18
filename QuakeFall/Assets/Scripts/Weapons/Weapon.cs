@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Weapons
 {
-	public class Weapon : MonoBehaviour
+	public class Weapon : NetworkBehaviour
 	{
 		[Header("Weapon"), SerializeField] protected string Name;
 		[SerializeField] protected Sprite Icon;
@@ -10,6 +11,7 @@ namespace Weapons
 		[SerializeField] protected int Ammo;
 		[SerializeField] protected float FireRate;
 		[SerializeField] protected Transform GunEnd;
+		[SerializeField] protected GameObject Player;
 		private float _timeSinceShot;
 		
 		// Custom methods.
