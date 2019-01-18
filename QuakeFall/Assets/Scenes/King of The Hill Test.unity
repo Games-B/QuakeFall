@@ -231,6 +231,7 @@ MonoBehaviour:
   _acceleration: 50
   _maxHorizontalVelocity: 6.5
   _maxJumps: 2
+  _stopSpeed: 0.5
   _camera: {fileID: 659470083}
 --- !u!4 &551740375
 Transform:
@@ -360,9 +361,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 801127710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d7bf461aec05964c86c4d190bb3a962, type: 3}
+  m_Script: {fileID: 11500000, guid: 9f86a24ae4a80f940974725c187e873d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _score: 0
+  _text1: {fileID: 1536070562}
+  _bonusMultiplier: 5
+  _passiveMultiplier: 0
+  _passiveIncrease: 0.01
 --- !u!136 &801127712
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -390,8 +396,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 801127710}
   m_LocalRotation: {x: 0, y: 0.74708503, z: -0, w: -0.66472846}
-  m_LocalPosition: {x: -0.08, y: 2.77, z: 5.49}
-  m_LocalScale: {x: 6.6915, y: 6.6915, z: 6.6915}
+  m_LocalPosition: {x: -0.08, y: 2.42, z: 5.49}
+  m_LocalScale: {x: 2.6190531, y: 2.6190531, z: 2.6190531}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
