@@ -7,7 +7,7 @@ namespace Weapons
 	{
 		[SerializeField] private int _damage;
 		[SerializeField] private float _explosionRange;
-		[SerializeField] private float _explosionForce;
+		[SerializeField] private float _explosionForce, _upwardsForce;
 		[SerializeField] private float _lifespan;
 
 		private float _currentLifespan;
@@ -35,7 +35,7 @@ namespace Weapons
 				if (coll.CompareTag("Player"))
 				{
 					coll.GetComponent<PlayerHealth>().Hurt(_damage);
-					coll.GetComponent<Rigidbody>().AddForce((coll.transform.position - transform.position).normalized * _explosionForce);
+					coll.GetComponent<Rigidbody>().AddForce((coll.transform.position - transform.position).normalized * _explosionForce + Vector3.up * _upwardsForce);
 				}
 				
 				// Push the object back if it has a rigid body.

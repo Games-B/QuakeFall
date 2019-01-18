@@ -1,16 +1,34 @@
 ﻿using UnityEngine;
+using UnityEngine.Networking;
 
 namespace Player
 {
 	// Make sure the health script is attached to a player.
 	[RequireComponent(typeof(PlayerMovement))]
-	public class PlayerHealth : MonoBehaviour
+	public class PlayerHealth : NetworkBehaviour
 	{
+		[SerializeField] private float _respawnTime;
+		[SerializeField] private Behaviour[] _componentsToDisable;
+		[SerializeField] private bool _isDead;
+
+		private float _timeUntilReSpawn;
+		
 		[SerializeField, Range(1, 1000)] private int _maxHealth;
 		[SerializeField] private int _currentHealth;
 
 		[SerializeField, Range(0, 1000)] private int _maxShield;
 		[SerializeField] private int _currentShield;
+
+		private void Update()
+		{
+			if (!_isDead) return;
+			if (_timeUntilReSpawn <= 0)
+			{
+				ReSpawn();
+				return;
+			}
+			_timeUntilReSpawn = Mathf.Clamp(_timeUntilReSpawn -= Time.deltaTime, 0, _respawnTime);
+		}
 
 		// Heals the player's health.
 		private void Heal(int amount)
@@ -59,7 +77,27 @@ namespace Player
 		private void Die()
 		{
 			// Stuff that happens when you die.
-			print("U dEd PhAm!"); 
+			print("U dEd PhAm!");
+			_timeUntilReSpawn = _respawnTime;
+			_isDead = true;
+			foreach (var behaviour in _componentsToDisable)
+			{
+				behaviour.enabled = false;
+			}
+		}
+
+		private void ReSpawn()
+		{
+			print("U brains PhAm!");
+			Heal(_maxHealth);
+			_isDead = false;
+			var positionArray = NetworkManager.singleton.startPositions;
+			var randomIndex = Random.Range(0, positionArray.Count);
+			transform.position = positionArray[randomIndex].position;
+			foreach (var behaviour in _componentsToDisable)
+			{
+				behaviour.enabled = true;
+			}
 		}
 	}
 }

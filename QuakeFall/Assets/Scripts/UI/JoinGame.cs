@@ -24,7 +24,7 @@ namespace UI
 		{
 			_networkManager.networkAddress = _ipAddress;
 			_networkManager.networkPort = _port;
-			_networkManager.StartHost();
+			_networkManager.StartClient();
 		}
 	}
 }
