@@ -7,7 +7,8 @@ public class KingOfTheHillManager : MonoBehaviour {
 	[SerializeField] private Text _text1;   // Reference to the Text component.
 	
 	[SerializeField] private float _bonusMultiplier; // Every second, the points increase by THIS amount. Right now it is 1.
-	[SerializeField] private float _
+	[SerializeField] private float _passiveMultiplier;
+	[SerializeField] private float _passiveIncrease;
 
 
 	private void Awake()
@@ -20,10 +21,11 @@ public class KingOfTheHillManager : MonoBehaviour {
 	{
 		// Set the displayed text to be the word "Score" followed by the score value.
 		_text1.text = "Score:" + Mathf.RoundToInt(_score);
+		_passiveMultiplier += _passiveIncrease * Time.deltaTime;
 	}
 	
 	private void OnTriggerStay(Collider other)
 	{
-		_score += _bonusMultiplier * Time.deltaTime;		
+		_score += _bonusMultiplier * _passiveMultiplier * Time.deltaTime;		
 	}
 }
