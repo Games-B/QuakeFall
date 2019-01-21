@@ -5,10 +5,10 @@ namespace Weapons
 {
 	public class Arsenal : MonoBehaviour
 	{
-		[SerializeField] private int _activeWeapon;
-		[SerializeField] private int _previousWeapon; 
-		[SerializeField] private List<Weapon> _inventory = new List<Weapon>(5);
-		[SerializeField] private bool _swapToPickup;
+		[SerializeField] private int activeWeapon;
+		[SerializeField] private int previousWeapon; 
+		[SerializeField] private List<Weapon> inventory = new List<Weapon>(5);
+		[SerializeField] private bool swapToPickup;
 
 		enum WeaponType
 		{
@@ -18,7 +18,7 @@ namespace Weapons
 		// Getters and setters.
 		public Weapon GetActiveWeapon()
 		{
-			return _inventory[_activeWeapon];
+			return inventory[activeWeapon];
 		}
 
 		// Unity methods.
@@ -30,25 +30,28 @@ namespace Weapons
 		private void SetupWeapons()
 		{
 			// Remove all weapons apart from the first one.
-			for (var i = 1; i < _inventory.Count - 1; i++)
+			for (var i = 1; i < inventory.Count - 1; i++)
 			{
 				RemoveWeapon(i);
 			}
 			
 			// Switch to the first weapon.
-			_inventory[0].enabled = true;
+			inventory[0].enabled = true;
 			SwitchWeapons(0);
 		}
 
-		public bool SwitchWeapons(int targetIndex)
+		private bool SwitchWeapons(int targetIndex)
 		{
 			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
-			if (!_inventory[targetIndex].enabled || _activeWeapon == targetIndex) return false;
+			if (!inventory[targetIndex].enabled || activeWeapon == targetIndex) return false;
 			
 			// Update the previous weapon.
-			_previousWeapon = _activeWeapon;
+			previousWeapon = activeWeapon;
 			// Switch to the target weapon.
-			_activeWeapon = targetIndex;
+			activeWeapon = targetIndex;
+			
+			HideAllWeapons();
+			inventory[activeWeapon].gameObject.SetActive(true);
 
 			return true;
 		}
@@ -56,25 +59,33 @@ namespace Weapons
 		public void AddWeapon(int targetIndex)
 		{
 			// Enable the target weapon.
-			_inventory[targetIndex].GetComponent<Weapon>().enabled = true;
+			inventory[targetIndex].GetComponent<Weapon>().enabled = true;
 
 			// Swap to the newly added weapon if the setting is enabled.
-			if (_swapToPickup)
+			if (swapToPickup)
 			{
 				SwitchWeapons(targetIndex);
 			}
 		}
 
-		public void RemoveWeapon(int targetIndex)
+		private void RemoveWeapon(int targetIndex)
 		{
 			// Swap to the previous weapon if the current one is being removed.
-			if (targetIndex == _activeWeapon)
+			if (targetIndex == activeWeapon)
 			{
-				SwitchWeapons(_previousWeapon);
+				SwitchWeapons(previousWeapon);
 			}
 			
 			// Remove the target weapon.
-			_inventory[targetIndex].enabled = false;
+			inventory[targetIndex].enabled = false;
+		}
+
+		private void HideAllWeapons()
+		{
+			foreach (var weapon in inventory)
+			{
+				weapon.gameObject.SetActive(false);
+			}
 		}
 	}
 }

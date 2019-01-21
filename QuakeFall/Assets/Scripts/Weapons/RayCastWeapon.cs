@@ -5,8 +5,8 @@ namespace Weapons
 {
 	public class RayCastWeapon : Weapon
 	{
-		[Header("RayCast Weapon"), SerializeField] private int _damage;
-		[SerializeField] private float _knockBack;
+		[Header("RayCast Weapon"), SerializeField] private int damage;
+		[SerializeField] private float knockBack;
 		
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
@@ -16,13 +16,13 @@ namespace Weapons
 			if (hit.transform.CompareTag("Player"))
 			{
 				// Hurt the player.
-				hit.transform.GetComponent<PlayerHealth>().Hurt(_damage);
+				hit.transform.GetComponent<PlayerHealth>().Hurt(damage);
 			}
 
 			// Push the object back if it has a rigid body.
 			if (hit.transform.GetComponent<Rigidbody>() != null)
 			{
-				hit.transform.GetComponent<Rigidbody>().AddForce(targetCamera.transform.forward * _knockBack);
+				hit.transform.GetComponent<Rigidbody>().AddForce(targetCamera.transform.forward * knockBack);
 			}
 
 			return true;

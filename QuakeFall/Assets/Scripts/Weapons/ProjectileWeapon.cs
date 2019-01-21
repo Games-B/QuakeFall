@@ -6,14 +6,19 @@ namespace Weapons
 {
 	public class ProjectileWeapon : Weapon
 	{
-		[Header("Projectile Weapon"), SerializeField] private int _prefabIndex;
-		[SerializeField] private float _initialForce;
-		[SerializeField] private NetworkCommands _networkCommands;
-		
+		[Header("Projectile Weapon"), SerializeField] private int prefabIndex;
+		[SerializeField] private float initialForce;
+		private NetworkCommands networkCommands;
+
+		private void Awake()
+		{
+			networkCommands = FindObjectOfType<NetworkCommands>();
+		}
+
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
 			if (!base.Shoot(targetCamera, out targetPoint, out hit)) return false;
-			_networkCommands.CmdShoot(_prefabIndex, GunEnd.position, targetPoint, _initialForce);
+			networkCommands.CmdShoot(prefabIndex, gunEnd.position, targetPoint, initialForce);
 			return true;
 		}
 	}
