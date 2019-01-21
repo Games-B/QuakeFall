@@ -24,4 +24,5 @@ public class PopUpHUD : MonoBehaviour
 	{
 		Application.Quit();
 	}
+	
 }
