@@ -579,6 +579,7 @@ GameObject:
   - component: {fileID: 114410999880370560}
   - component: {fileID: 114971198576061930}
   - component: {fileID: 114082918020944792}
+  - component: {fileID: 114581997288802496}
   m_Layer: 0
   m_Name: Network Player
   m_TagString: Player
@@ -1769,18 +1770,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec921da65b25a846a16dee21ee280bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _crossHairImage: {fileID: 21300000, guid: 497a22832cdfd60459cfe00ff6579d4e, type: 3}
-  _crossHairFill: {r: 0, g: 1, b: 0.792119, a: 1}
-  _transforms:
+  crossHairImage: {fileID: 21300000, guid: 497a22832cdfd60459cfe00ff6579d4e, type: 3}
+  crossHairFill: {r: 1, g: 0, b: 0, a: 1}
+  transforms:
   - {fileID: 224775237108628248}
   - {fileID: 224120880926425090}
   - {fileID: 224638720909012918}
   - {fileID: 224160875393332036}
   - {fileID: 224211282950900410}
-  _dotWidth: 3
-  _lineWidth: 10
-  _lineHeight: 3
-  _lineDistance: 20
+  dotWidth: 3
+  lineWidth: 20
+  lineHeight: 3
+  lineDistance: 40
 --- !u!114 &114174820050743232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1923,22 +1924,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ef5748986ce8f499fbac7483638289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _respawnTime: 5
-  _isDead: 0
-  _maxHealth: 100
-  _currentHealth: 100
-  _maxShield: 100
-  _currentShield: 100
-  _componentArray:
+  respawnTime: 5
+  isDead: 0
+  maxHealth: 100
+  currentHealth: 100
+  maxShield: 100
+  currentShield: 100
+  componentArray:
   - {fileID: 114423650946227136}
-  - {fileID: 114859915629477818}
   - {fileID: 20070933643722440}
-  - {fileID: 114435770850304860}
-  - {fileID: 114020193665306130}
-  - {fileID: 223639640965706596}
-  _meshRenderer: {fileID: 23731687638628474}
-  _capsuleCollider: {fileID: 136143936072528972}
-  _weapons: {fileID: 1722971020032806}
+  - {fileID: 114164773688352522}
+  meshRenderer: {fileID: 23731687638628474}
+  capsuleCollider: {fileID: 136143936072528972}
+  weapons: {fileID: 1722971020032806}
+--- !u!114 &114581997288802496
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1799108290675578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ef5a889848e3444bfc00870d3a6457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightThreshold: -20
 --- !u!114 &114650858068649572
 MonoBehaviour:
   m_ObjectHideFlags: 1
