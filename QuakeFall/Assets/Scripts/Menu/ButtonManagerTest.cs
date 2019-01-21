@@ -41,6 +41,9 @@ namespace Menu
 		{
 			_isShowingHost = !_isShowingHost;
 			HostGamePanel.SetActive(_isShowingHost);
+			
+			
+			
 		
 
 		}
@@ -50,6 +53,7 @@ namespace Menu
 			_isShowingJoin = !_isShowingJoin;
 			JoinGamePanel.SetActive(_isShowingJoin);
 			
+			
 		}
 	
 
@@ -58,12 +62,15 @@ namespace Menu
 			_isShowingOptions = !_isShowingOptions;
 			OptionsPanel.SetActive(_isShowingOptions);
 			
+			
 		}
 
 
         public void AudioPanel()
         {
             AudioSettingsPanel.SetActive(true);
+	        
+	
         }
 
 
