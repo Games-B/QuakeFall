@@ -7,56 +7,56 @@ namespace Player
 	[RequireComponent(typeof(PlayerMovement))]
 	public class PlayerHealth : NetworkBehaviour
 	{
-		[SerializeField] private float _respawnTime;
-		[SerializeField] private bool _isDead;
+		[SerializeField] private float respawnTime;
+		[SerializeField] private bool isDead;
 
 		private float _timeUntilReSpawn;
 		
-		[SerializeField, Range(1, 1000)] private int _maxHealth;
-		[SerializeField] private int _currentHealth;
+		[SerializeField, Range(1, 1000)] private int maxHealth;
+		[SerializeField] private int currentHealth;
 
-		[SerializeField, Range(0, 1000)] private int _maxShield;
-		[SerializeField] private int _currentShield;
+		[SerializeField, Range(0, 1000)] private int maxShield;
+		[SerializeField] private int currentShield;
 		
-		[Header("Components To Disable"), SerializeField] private Behaviour[] _componentArray;
-		[SerializeField] private MeshRenderer _meshRenderer;
-		[SerializeField] private CapsuleCollider _capsuleCollider;
-		[SerializeField] private GameObject _weapons;
+		[Header("Components To Disable"), SerializeField] private Behaviour[] componentArray;
+		[SerializeField] private MeshRenderer meshRenderer;
+		[SerializeField] private CapsuleCollider capsuleCollider;
+		[SerializeField] private GameObject weapons;
 		
 
 		private void Update()
 		{
-			if (!_isDead) return;
+			if (!isDead) return;
 			if (_timeUntilReSpawn <= 0)
 			{
 				ReSpawn();
 				return;
 			}
-			_timeUntilReSpawn = Mathf.Clamp(_timeUntilReSpawn -= Time.deltaTime, 0, _respawnTime);
+			_timeUntilReSpawn = Mathf.Clamp(_timeUntilReSpawn -= Time.deltaTime, 0, respawnTime);
 		}
 
 		// Heals the player's health.
 		private void Heal(int amount)
 		{
 			// Work out the amount to heal, and clamp it to prevent over healing.
-			var amountToHeal = Mathf.Clamp(amount, 0, _maxHealth - _currentHealth);
-			_currentHealth += amountToHeal;
+			var amountToHeal = Mathf.Clamp(amount, 0, maxHealth - currentHealth);
+			currentHealth += amountToHeal;
 		}
 
 		private void Shield(int amount)
 		{
 			// Work out the amount to heal, and clamp it to prevent over healing.
-			var amountToShield = Mathf.Clamp(amount, 0, _maxShield - _currentShield);
-			_currentShield  += amountToShield;
+			var amountToShield = Mathf.Clamp(amount, 0, maxShield - currentShield);
+			currentShield  += amountToShield;
 		}
 
 		private void HurtHealth(int amount)
 		{
-			var amountToHurt = Mathf.Clamp(amount, 0, _currentHealth);
-			_currentHealth -= amountToHurt;
+			var amountToHurt = Mathf.Clamp(amount, 0, currentHealth);
+			currentHealth -= amountToHurt;
 			
 			// Check if the player should die.
-			if (_currentHealth <= 0)
+			if (currentHealth <= 0)
 			{
 				Die();
 			}
@@ -64,8 +64,8 @@ namespace Player
 
 		private int HurtShield(int amount)
 		{
-			var amountToHurt = Mathf.Clamp(amount, 0, _currentShield);
-			_currentShield -= amountToHurt;
+			var amountToHurt = Mathf.Clamp(amount, 0, currentShield);
+			currentShield -= amountToHurt;
 			
 			// Return the amount of damage left.
 			return amount - amountToHurt;
@@ -79,17 +79,17 @@ namespace Player
 			HurtHealth(damageLeft);
 		}
 
-		private void Die()
+		public void Die()
 		{
 			// Stuff that happens when you die.
-			print("U dEd PhAm!");
-			_timeUntilReSpawn = _respawnTime;
-			_isDead = true;
+			if (isDead) return;
+			_timeUntilReSpawn = respawnTime;
+			isDead = true;
 			// Disable all the components.
-			_meshRenderer.enabled = false;
-			_capsuleCollider.enabled = false;
-			_weapons.SetActive(false);
-			foreach (var behaviour in _componentArray)
+			meshRenderer.enabled = false;
+			capsuleCollider.enabled = false;
+			weapons.SetActive(false);
+			foreach (var behaviour in componentArray)
 			{
 				behaviour.enabled = false;
 			}
@@ -98,16 +98,16 @@ namespace Player
 		private void ReSpawn()
 		{
 			print("U brains PhAm!");
-			Heal(_maxHealth);
-			_isDead = false;
+			Heal(maxHealth);
+			isDead = false;
 			var positionArray = NetworkManager.singleton.startPositions;
 			var randomIndex = Random.Range(0, positionArray.Count);
 			transform.position = positionArray[randomIndex].position;
 			// Enable all the components.
-			_meshRenderer.enabled = true;
-			_capsuleCollider.enabled = true;
-			_weapons.SetActive(true);
-			foreach (var behaviour in _componentArray)
+			meshRenderer.enabled = true;
+			capsuleCollider.enabled = true;
+			weapons.SetActive(true);
+			foreach (var behaviour in componentArray)
 			{
 				behaviour.enabled = true;
 			}
