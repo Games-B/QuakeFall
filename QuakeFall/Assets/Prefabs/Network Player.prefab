@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 223639640965706596}
   - component: {fileID: 114136674894618092}
   - component: {fileID: 114174820050743232}
+  - component: {fileID: 114735415658940292}
   m_Layer: 0
   m_Name: HUD
   m_TagString: Untagged
@@ -2368,7 +2369,7 @@ MonoBehaviour:
   m_FillOrigin: 0
 --- !u!114 &114735415658940292
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1561612477307520}
