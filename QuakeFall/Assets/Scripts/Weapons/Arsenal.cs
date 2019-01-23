@@ -16,9 +16,13 @@ namespace Weapons
 		}
 
 		// Getters and setters.
-		public Weapon GetActiveWeapon()
+		public Weapon[] GetInventory()
 		{
-			return inventory[activeWeapon];
+			return inventory.ToArray();
+		}
+		public int GetActiveWeapon()
+		{
+			return activeWeapon;
 		}
 
 		// Unity methods.
@@ -40,7 +44,7 @@ namespace Weapons
 			SwitchWeapons(0);
 		}
 
-		private bool SwitchWeapons(int targetIndex)
+		public bool SwitchWeapons(int targetIndex)
 		{
 			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
 			if (!inventory[targetIndex].enabled || activeWeapon == targetIndex) return false;
@@ -82,6 +86,7 @@ namespace Weapons
 
 		private void HideAllWeapons()
 		{
+			print("Hiding");
 			foreach (var weapon in inventory)
 			{
 				weapon.gameObject.SetActive(false);

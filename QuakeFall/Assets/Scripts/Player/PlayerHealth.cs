@@ -1,5 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.UI;
 
 namespace Player
 {
@@ -22,7 +24,15 @@ namespace Player
 		[SerializeField] private MeshRenderer meshRenderer;
 		[SerializeField] private CapsuleCollider capsuleCollider;
 		[SerializeField] private GameObject weapons;
-		
+
+		public int[] GetHealth()
+		{
+			return new[]
+			{
+				currentHealth,
+				maxHealth
+			};
+		}
 
 		private void Update()
 		{

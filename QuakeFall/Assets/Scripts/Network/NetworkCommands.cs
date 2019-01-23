@@ -3,14 +3,13 @@ using UnityEngine.Networking;
 
 namespace Network
 {
-	[RequireComponent(typeof(NetworkManager))]
 	public class NetworkCommands : NetworkBehaviour
 	{
 		private NetworkManager _networkManager;
 
 		private void Awake()
 		{
-			_networkManager = GetComponent<NetworkManager>();
+			_networkManager = FindObjectOfType<NetworkManager>();
 		}
 
 		[Command]
