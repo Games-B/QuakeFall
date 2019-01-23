@@ -2362,16 +2362,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1561612477307520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c79f60ae9b3bf469f467cc762a98a9, type: 3}
+  m_Script: {fileID: 11500000, guid: 72eecf02d9f6a854fa449f85f24bc147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _playerHealth: {fileID: 114487845923867504}
-  _healthThreshold: 0.536
+  _healthThreshold: 0.3
   _flashCooldown: 0
   _vignette: {fileID: 114222128209013892}
   _defaultColour: {r: 0, g: 0, b: 0, a: 0}
-  _shieldColour: {r: 0, g: 0.97562337, b: 1, a: 0.48235294}
-  _lowHealthColour: {r: 1, g: 0, b: 0, a: 0.6784314}
+  _shieldColour: {r: 0, g: 0.98453856, b: 1, a: 0.73333335}
+  _lowHealthColour: {r: 1, g: 0.08018869, b: 0.08018869, a: 0.6509804}
 --- !u!114 &114859298734027598
 MonoBehaviour:
   m_ObjectHideFlags: 1
