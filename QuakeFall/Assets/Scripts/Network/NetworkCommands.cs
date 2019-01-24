@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.Networking;
+using Weapons;
 
 namespace Network
 {
@@ -13,15 +14,17 @@ namespace Network
 		}
 
 		[Command]
-		public void CmdShoot(int prefabIndex, Vector3 startPosition, Vector3 targetPoint, float initialForce)
+		public void CmdShoot(int prefabIndex, Vector3 startPosition, Vector3 targetPoint, float initialForce, GameObject shooter)
 		{
-			RpcSpawnProjectile(prefabIndex, startPosition, targetPoint, initialForce);
+			RpcSpawnProjectile(prefabIndex, startPosition, targetPoint, initialForce, shooter);
 		}
 		
 		[ClientRpc]
-		public void RpcSpawnProjectile(int prefabIndex, Vector3 startPosition, Vector3 targetPoint, float initialForce)
+		public void RpcSpawnProjectile(int prefabIndex, Vector3 startPosition, Vector3 targetPoint, float initialForce, GameObject shooter)
 		{
 			var newProjectile = Instantiate(_networkManager.spawnPrefabs[prefabIndex], startPosition, Quaternion.identity, null);
+			
+			newProjectile.GetComponent<Projectile>().SetOwner(shooter);
 			
 			// Point it towards the target object.
 			newProjectile.transform.LookAt(targetPoint);

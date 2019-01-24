@@ -21,11 +21,11 @@ GameObject:
   - component: {fileID: 4302759686931760}
   - component: {fileID: 33047312465250308}
   - component: {fileID: 23410743734059138}
-  - component: {fileID: 135580278966968522}
   - component: {fileID: 114457282546234980}
   - component: {fileID: 54465107923189586}
   - component: {fileID: 114195761862601700}
   - component: {fileID: 114099234100341978}
+  - component: {fileID: 136143368102384828}
   m_Layer: 0
   m_Name: Network Boopgun Rocket
   m_TagString: Untagged
@@ -40,8 +40,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1924529434647614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalPosition: {x: -0.4117751, y: 1.2858146, z: 0.6060505}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -61,7 +61,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e20bc302968b4944e849220703a92810, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -167,13 +167,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea6fca2955ac49fa8b20220ec86f3ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damage: 60
+  _damage: 10
   _explosionRange: 30
   _explosionForce: 500
   _upwardsForce: 1000
   _lifespan: 10
---- !u!135 &135580278966968522
-SphereCollider:
+--- !u!136 &136143368102384828
+CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -181,6 +181,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
   m_Radius: 0.5
+  m_Height: 1
+  m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}

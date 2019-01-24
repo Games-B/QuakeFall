@@ -21,15 +21,13 @@ namespace Player
 		[SerializeField] private int currentShield;
 		
 		[Header("Components To Disable"), SerializeField] private Behaviour[] componentArray;
-		[SerializeField] private MeshRenderer meshRenderer;
 		[SerializeField] private CapsuleCollider capsuleCollider;
 		[SerializeField] private GameObject weapons;
-		[SerializeField] private GameObject deathVFX;
+		[SerializeField] private GameObject deathVfxPrefab;
 
-		private void Awake()
-		{
-			deathVFX.SetActive(false);
-		}
+		private GameObject _deathVfxInstance;
+
+		private Rigidbody _rigidBody;
 
 		public int[] GetHealth()
 		{
@@ -38,6 +36,11 @@ namespace Player
 				currentHealth,
 				maxHealth
 			};
+		}
+
+		private void Awake()
+		{
+			_rigidBody = GetComponent<Rigidbody>();
 		}
 
 		private void Update()
@@ -102,18 +105,19 @@ namespace Player
 			_timeUntilReSpawn = respawnTime;
 			isDead = true;
 			// Disable all the components.
-			meshRenderer.enabled = false;
 			capsuleCollider.enabled = false;
 			weapons.SetActive(false);
-			deathVFX.SetActive(true);
 			foreach (var behaviour in componentArray)
 			{
 				behaviour.enabled = false;
 			}
+			// Create the death VFX.
+			_deathVfxInstance = Instantiate(deathVfxPrefab, transform.position, Quaternion.identity);
 		}
 
 		private void ReSpawn()
 		{
+			Destroy(_deathVfxInstance);
 			print("U brains PhAm!");
 			Heal(maxHealth);
 			isDead = false;
@@ -121,7 +125,6 @@ namespace Player
 			var randomIndex = Random.Range(0, positionArray.Count);
 			transform.position = positionArray[randomIndex].position;
 			// Enable all the components.
-			meshRenderer.enabled = true;
 			capsuleCollider.enabled = true;
 			weapons.SetActive(true);
 			foreach (var behaviour in componentArray)

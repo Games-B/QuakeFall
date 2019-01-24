@@ -10,8 +10,14 @@ namespace Weapons
 		[SerializeField] private float _explosionForce, _upwardsForce;
 		[SerializeField] private float _lifespan;
 
+		private GameObject _owner;
 		private float _currentLifespan;
 
+		public void SetOwner(GameObject newOwner)
+		{
+			_owner = newOwner;
+		}
+		
 		private void Update()
 		{
 			_currentLifespan = Mathf.Clamp(_currentLifespan + Time.deltaTime, 0, _lifespan);
@@ -34,8 +40,8 @@ namespace Weapons
 				// Hurt the object if it's a player.
 				if (coll.CompareTag("Player"))
 				{
-					coll.GetComponent<PlayerHealth>().Hurt(_damage);
 					coll.GetComponent<Rigidbody>().AddForce((coll.transform.position - transform.position).normalized * _explosionForce + Vector3.up * _upwardsForce);
+					coll.GetComponent<PlayerHealth>().Hurt(_damage);
 				}
 				
 				// Push the object back if it has a rigid body.
