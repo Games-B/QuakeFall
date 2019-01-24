@@ -5,7 +5,7 @@ namespace Weapons
 {
 	public class Arsenal : MonoBehaviour
 	{
-		[SerializeField] private int activeWeapon;
+		[SerializeField] private int activeWeapon = 1;
 		[SerializeField] private int previousWeapon; 
 		[SerializeField] private List<Weapon> inventory = new List<Weapon>(5);
 		[SerializeField] private bool swapToPickup;
@@ -33,6 +33,7 @@ namespace Weapons
 
 		private void SetupWeapons()
 		{
+			print("XXX");
 			// Remove all weapons apart from the first one.
 			for (var i = 1; i < inventory.Count - 1; i++)
 			{
@@ -46,6 +47,10 @@ namespace Weapons
 
 		public bool SwitchWeapons(int targetIndex)
 		{
+			// Loop the target if it's out of bounds.
+			if (targetIndex >= inventory.Count) targetIndex = 0;
+			else if (targetIndex < 0) targetIndex = inventory.Count - 1;
+			
 			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
 			if (!inventory[targetIndex].enabled || activeWeapon == targetIndex) return false;
 			

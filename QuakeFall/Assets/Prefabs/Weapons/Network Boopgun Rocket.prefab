@@ -170,7 +170,7 @@ MonoBehaviour:
   _damage: 60
   _explosionRange: 30
   _explosionForce: 500
-  _upwardsForce: 500
+  _upwardsForce: 1000
   _lifespan: 10
 --- !u!135 &135580278966968522
 SphereCollider:
