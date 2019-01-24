@@ -10,8 +10,8 @@ namespace Weapons
 		
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
+			
 			if (!base.Shoot(targetCamera, out targetPoint, out hit)) return false;
-
 			if (hit.transform == null) return false;
 			if (hit.transform.CompareTag("Player"))
 			{
@@ -19,6 +19,7 @@ namespace Weapons
 				hit.transform.GetComponent<PlayerHealth>().Hurt(_damage);
 			}
 
+			print(hit.transform.name);
 			// Push the object back if it has a rigid body.
 			if (hit.transform.GetComponent<Rigidbody>() != null)
 			{
