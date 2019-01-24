@@ -24,6 +24,12 @@ namespace Player
 		[SerializeField] private MeshRenderer meshRenderer;
 		[SerializeField] private CapsuleCollider capsuleCollider;
 		[SerializeField] private GameObject weapons;
+		[SerializeField] private GameObject deathVFX;
+
+		private void Awake()
+		{
+			deathVFX.SetActive(false);
+		}
 
 		public int[] GetHealth()
 		{
@@ -99,6 +105,7 @@ namespace Player
 			meshRenderer.enabled = false;
 			capsuleCollider.enabled = false;
 			weapons.SetActive(false);
+			deathVFX.SetActive(true);
 			foreach (var behaviour in componentArray)
 			{
 				behaviour.enabled = false;
