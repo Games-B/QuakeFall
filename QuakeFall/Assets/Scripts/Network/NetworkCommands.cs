@@ -14,6 +14,19 @@ namespace Network
 		}
 
 		[Command]
+		public void CmdSpawnParticle(int prefabIndex, Vector3 position)
+		{
+			RpcSpawnParticle(prefabIndex, position);
+		}
+
+		[ClientRpc]
+		public void RpcSpawnParticle(int prefabIndex, Vector3 position)
+		{
+			var newParticle = Instantiate(_networkManager.spawnPrefabs[prefabIndex], position, Quaternion.identity);
+			NetworkServer.Spawn(newParticle);
+		}
+		
+		[Command]
 		public void CmdShoot(int prefabIndex, Vector3 startPosition, Vector3 targetPoint, float initialForce, GameObject shooter)
 		{
 			RpcSpawnProjectile(prefabIndex, startPosition, targetPoint, initialForce, shooter);

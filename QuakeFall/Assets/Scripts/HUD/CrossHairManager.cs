@@ -31,8 +31,8 @@ namespace HUD
 		private void FixedUpdate()
 		{
 			var newPosition = player.position;
-			var difference = newPosition - _oldPosition;
-			dynamicMultiplier = 1 + Mathf.Abs(difference.x) + Mathf.Abs(difference.y) + Mathf.Abs(difference.z) * dynamicScale;
+			var difference = Vector3.Distance(newPosition, _oldPosition);
+			dynamicMultiplier = 1 + difference * dynamicScale;
 			_oldPosition = newPosition;
 		}
 
