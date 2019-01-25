@@ -448,6 +448,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1879231266856364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4279891005565536}
+  m_Layer: 0
+  m_Name: Gun End
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1936692327256350
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,8 +471,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4312632220954234}
+  - component: {fileID: 114076042004884090}
   m_Layer: 0
-  m_Name: sniper
+  m_Name: Sniper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -631,6 +647,19 @@ Transform:
   m_Father: {fileID: 4312632220954234}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4279891005565536
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1879231266856364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.142, z: -0.85}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4312632220954234}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4303806745152918
 Transform:
   m_ObjectHideFlags: 1
@@ -664,7 +693,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1936692327256350}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 0.237, y: 0.422, z: -0.212}
+  m_LocalPosition: {x: 0.146, y: 0.382, z: -0.197}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4647213759284384}
@@ -684,6 +713,7 @@ Transform:
   - {fileID: 4421676113681732}
   - {fileID: 4931551304414510}
   - {fileID: 4249253281299512}
+  - {fileID: 4279891005565536}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
@@ -1043,3 +1073,22 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1391480260085550}
   m_Mesh: {fileID: 4300000, guid: 8e8a32a594482d7498913fd4b01d0a84, type: 3}
+--- !u!114 &114076042004884090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936692327256350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06a379a0b8625fb45a3530190bbc788c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponName: L4N-C3R
+  icon: {fileID: 0}
+  range: 200
+  ammo: 100
+  fireRate: 1
+  gunEnd: {fileID: 4279891005565536}
+  damage: 100
+  knockBack: 200
