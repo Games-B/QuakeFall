@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Network;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -6,7 +7,7 @@ using UnityEngine.UI;
 namespace Player
 {
 	// Make sure the health script is attached to a player.
-	[RequireComponent(typeof(PlayerMovement))]
+	[RequireComponent(typeof(PlayerMovement), typeof(NetworkCommands))]
 	public class PlayerHealth : NetworkBehaviour
 	{
 		[SerializeField] private float respawnTime;
@@ -23,10 +24,9 @@ namespace Player
 		[Header("Components To Disable"), SerializeField] private Behaviour[] componentArray;
 		[SerializeField] private CapsuleCollider capsuleCollider;
 		[SerializeField] private GameObject weapons;
-		[SerializeField] private GameObject deathVfxPrefab;
+		[SerializeField] private int deathVfx;
 
-		private GameObject _deathVfxInstance;
-
+		private NetworkCommands _networkCommands;
 		private Rigidbody _rigidBody;
 
 		public int[] GetHealth()
@@ -40,6 +40,7 @@ namespace Player
 
 		private void Awake()
 		{
+			_networkCommands = GetComponent<NetworkCommands>();
 			_rigidBody = GetComponent<Rigidbody>();
 		}
 
@@ -112,12 +113,12 @@ namespace Player
 				behaviour.enabled = false;
 			}
 			// Create the death VFX.
-			_deathVfxInstance = Instantiate(deathVfxPrefab, transform.position, Quaternion.identity);
+			_networkCommands.RpcSpawnParticle(deathVfx, transform.position);
+			
 		}
 
 		private void ReSpawn()
 		{
-			Destroy(_deathVfxInstance);
 			print("U brains PhAm!");
 			Heal(maxHealth);
 			isDead = false;
