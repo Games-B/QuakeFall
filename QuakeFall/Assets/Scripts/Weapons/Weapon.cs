@@ -12,6 +12,16 @@ namespace Weapons
 		[SerializeField] protected float fireRate;
 		[SerializeField] protected Transform gunEnd;
 		private float _timeSinceShot;
+
+		public int GetAmmo()
+		{
+			return ammo;
+		}
+		
+		public void AddAmmo(int ammoToAdd)
+		{
+			ammo += ammoToAdd;
+		}
 		
 		// Custom methods.
 		public virtual bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
