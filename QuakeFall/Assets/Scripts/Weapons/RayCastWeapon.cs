@@ -7,6 +7,7 @@ namespace Weapons
 	{
 		[Header("RayCast Weapon"), SerializeField] private int damage;
 		[SerializeField] private float knockBack;
+		[SerializeField] private int lineIndex;
 		
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{

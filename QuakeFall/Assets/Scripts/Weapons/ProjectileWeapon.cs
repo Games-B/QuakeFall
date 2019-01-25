@@ -19,7 +19,7 @@ namespace Weapons
 		public override bool Shoot(UnityEngine.Camera targetCamera, out Vector3 targetPoint, out RaycastHit hit)
 		{
 			if (!base.Shoot(targetCamera, out targetPoint, out hit)) return false;
-			networkCommands.CmdShoot(prefabIndex, gunEnd.position, targetPoint, initialForce, shooter);
+			networkCommands.CmdShootProjectile(prefabIndex, gunEnd.position, targetPoint, initialForce, shooter);
 			return true;
 		}
 	}
