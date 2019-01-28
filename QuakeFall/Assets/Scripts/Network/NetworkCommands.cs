@@ -75,6 +75,7 @@ namespace Network
 		{
 			var droppedItem = Instantiate(_networkManager.spawnPrefabs[prefabIndex], spawnPosition,
 				Quaternion.identity);
+			print(droppedItem);
 			var itemStats = droppedItem.GetComponent<WeaponPickup>();
 			itemStats.SetAmmo(ammo);
 			droppedItem.GetComponent<Rigidbody>().AddForce(force);

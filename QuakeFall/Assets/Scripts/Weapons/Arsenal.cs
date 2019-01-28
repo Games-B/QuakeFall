@@ -17,6 +17,11 @@ namespace Weapons
 			Pistol, Rifle, Boopgun, Sniper, Shotgun 
 		}
 
+		private void Start()
+		{
+			SwitchWeapons(0);
+		}
+
 		// Getters and setters.
 		public Weapon[] GetInventory()
 		{
@@ -34,14 +39,15 @@ namespace Weapons
 			else if (targetIndex < 0) targetIndex = inventory.Count - 1;
 			
 			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
-			if (!inventory[targetIndex].gameObject.activeSelf || activeWeapon == targetIndex) return false;
+			if (!inventory[targetIndex].enabled) return false;
 			
 			// Update the previous weapon.
-			previousWeapon = activeWeapon;
+			previousWeapon = targetIndex == activeWeapon ? previousWeapon : activeWeapon;
+			inventory[previousWeapon].gameObject.SetActive(false);
 			// Switch to the target weapon.
 			activeWeapon = targetIndex;
 			
-			HideAllWeapons();
+			
 			inventory[activeWeapon].gameObject.SetActive(true);
 
 			return true;
@@ -55,7 +61,7 @@ namespace Weapons
 		public void AddWeapon(int targetIndex)
 		{
 			// Enable the target weapon.
-			inventory[targetIndex].GetComponent<Weapon>().enabled = true;
+			inventory[targetIndex].enabled = true;
 
 			// Swap to the newly added weapon if the setting is enabled.
 			if (swapToPickup)

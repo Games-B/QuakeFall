@@ -9,7 +9,8 @@ namespace Weapons
 		[SerializeField] private float dropForce;
 		[Header("References"), SerializeField] private Transform playerTransform;
 		[SerializeField] private NetworkCommands networkCommands;
-
+		[SerializeField] private float forwardOffset;
+		
 		private Arsenal _arsenal;
 
 		private void Awake()
@@ -28,9 +29,12 @@ namespace Weapons
 		private void DropWeapon()
 		{
 			var activeWeapon = _arsenal.GetActiveWeapon();
+			
+			if (activeWeapon == 0) return;
 			var inventory = _arsenal.GetInventory();
 			var ammo = inventory[activeWeapon].GetAmmo();
-			networkCommands.CmdDropWeapon(activeWeapon, ammo, playerTransform.position, playerTransform.forward * dropForce);
+			var spawnPosition = playerTransform.position + playerTransform.forward * forwardOffset;
+			networkCommands.CmdDropWeapon(activeWeapon, ammo,  spawnPosition, playerTransform.forward * dropForce);
 			_arsenal.RemoveWeapon(activeWeapon);
 		}
 	}
