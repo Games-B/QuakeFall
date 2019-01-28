@@ -63,21 +63,5 @@ namespace Network
 			lineRenderer.SetPositions(positions);
 			NetworkServer.Spawn(newLine);
 		}
-
-		[Command]
-		public void CmdDropWeapon(int prefabIndex, int ammo, Vector3 spawnPosition, Vector3 force)
-		{
-			RpcSpawnDroppedWeapon(prefabIndex, ammo, spawnPosition, force);
-		}
-		
-		[ClientRpc]
-		public void RpcSpawnDroppedWeapon(int prefabIndex, int ammo, Vector3 spawnPosition, Vector3 force)
-		{
-			var droppedItem = Instantiate(_networkManager.spawnPrefabs[prefabIndex], spawnPosition,
-				Quaternion.identity);
-			var itemStats = droppedItem.GetComponent<WeaponPickup>();
-			itemStats.SetAmmo(ammo);
-			droppedItem.GetComponent<Rigidbody>().AddForce(force);
-		}
 	}
 }

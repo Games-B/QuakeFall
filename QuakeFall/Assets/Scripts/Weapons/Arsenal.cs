@@ -1,7 +1,5 @@
 ﻿using System.Collections.Generic;
-using Network;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 namespace Weapons
 {
@@ -26,7 +24,27 @@ namespace Weapons
 		{
 			return activeWeapon;
 		}
-		
+
+		// Unity methods.
+		private void Start()
+		{
+			SetupWeapons();
+		}
+
+		private void SetupWeapons()
+		{
+			print("XXX");
+			// Remove all weapons apart from the first one.
+			for (var i = 1; i < inventory.Count - 1; i++)
+			{
+				RemoveWeapon(i);
+			}
+			
+			// Switch to the first weapon.
+			inventory[0].enabled = true;
+			SwitchWeapons(0);
+		}
+
 		public bool SwitchWeapons(int targetIndex)
 		{
 			// Loop the target if it's out of bounds.
@@ -34,7 +52,7 @@ namespace Weapons
 			else if (targetIndex < 0) targetIndex = inventory.Count - 1;
 			
 			// Only switch if the target weapon is enabled, and the weapon is not the same as the current one.
-			if (!inventory[targetIndex].gameObject.activeSelf || activeWeapon == targetIndex) return false;
+			if (!inventory[targetIndex].enabled || activeWeapon == targetIndex) return false;
 			
 			// Update the previous weapon.
 			previousWeapon = activeWeapon;
@@ -46,12 +64,7 @@ namespace Weapons
 
 			return true;
 		}
-		
-		public void AddAmmo(int weaponIndex, int ammoCount)
-		{
-			inventory[weaponIndex].GetComponent<Weapon>().AddAmmo(ammoCount);
-		}
-		
+
 		public void AddWeapon(int targetIndex)
 		{
 			// Enable the target weapon.
@@ -64,7 +77,7 @@ namespace Weapons
 			}
 		}
 
-		public void RemoveWeapon(int targetIndex)
+		private void RemoveWeapon(int targetIndex)
 		{
 			// Swap to the previous weapon if the current one is being removed.
 			if (targetIndex == activeWeapon)
@@ -78,6 +91,7 @@ namespace Weapons
 
 		private void HideAllWeapons()
 		{
+			print("Hiding");
 			foreach (var weapon in inventory)
 			{
 				weapon.gameObject.SetActive(false);
