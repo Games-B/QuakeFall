@@ -9,7 +9,17 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: pCube15
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: A2
+    second: {fileID: 2800000, guid: ccb3d5d605d565043aa80cc4a0e0a2fd, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: A2 Specular
+    second: {fileID: 2800000, guid: 4167dd99b4373824085ee5498eb0b51b, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

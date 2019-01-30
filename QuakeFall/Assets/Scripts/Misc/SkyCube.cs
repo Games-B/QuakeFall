@@ -26,7 +26,7 @@ public class SkyCube : MonoBehaviour
 			else colourIndex ++;
 		}
 		skyBox.SetColor("_Tint", targetColour);
-		directionalLight.color = targetColour;
+		// directionalLight.color = targetColour;
 		
 		// Rotate the sky box.
 		var rotation = skyBox.GetFloat("_Rotation");

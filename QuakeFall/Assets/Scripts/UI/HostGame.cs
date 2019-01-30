@@ -6,8 +6,13 @@ namespace UI
 {
 	public class HostGame : MonoBehaviour
 	{
-		[SerializeField] private NetworkManager _networkManager;
 		[SerializeField] private int _port = 7777;
+		private NetworkManager _networkManager;
+
+		private void Awake()
+		{
+			_networkManager = FindObjectOfType<NetworkManager>();
+		}
 
 		public void UpdatePort(InputField target)
 		{

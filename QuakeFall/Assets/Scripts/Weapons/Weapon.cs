@@ -13,6 +13,11 @@ namespace Weapons
 		[SerializeField] protected Transform gunEnd;
 		private float _timeSinceShot;
 
+		public string GetName()
+		{
+			return weaponName;
+		}
+		
 		public int GetAmmo()
 		{
 			return ammo;
