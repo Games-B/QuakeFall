@@ -11,6 +11,7 @@ namespace Weapons
 		[SerializeField] protected int ammo;
 		[SerializeField] protected float fireRate;
 		[SerializeField] protected Transform gunEnd;
+		[SerializeField] protected ParticleSystem[] shootEffects;
 		private float _timeSinceShot;
 
 		public string GetName()
@@ -40,6 +41,12 @@ namespace Weapons
 			}
 			_timeSinceShot = 0;
 			ammo--;
+			
+			// Play the VFX.
+			foreach (var effect in shootEffects)
+			{
+				effect.Play();
+			}
 			
 			// Set the start of the ray cast to the center of the camera, to make sure it points to the cross hair.
 			var rayOrigin = targetCamera.ViewportToWorldPoint(new Vector3(.5f, .5f, 0));

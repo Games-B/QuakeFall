@@ -788,6 +788,7 @@ GameObject:
   - component: {fileID: 224143106570879640}
   - component: {fileID: 222851970030203070}
   - component: {fileID: 114346232290706422}
+  - component: {fileID: 111500970178624124}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -1812,6 +1813,20 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 503ecc1399d01bd4db2f1244c3a1cb1d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!111 &111500970178624124
+Animation:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1515092973103798}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 14d03d8df0ce4964b9658ca24b3fd5ba, type: 2}
+  m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -3484,7 +3499,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.42745098}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3764706}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -4138,7 +4153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7525f45017ba83044a246f6500d6f857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _networkManager: {fileID: 0}
   _port: 7777
 --- !u!114 &114480769379383710
 MonoBehaviour:
@@ -6148,7 +6162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
