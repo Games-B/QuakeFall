@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Custom_Glow
+  m_Name: Transparency Glow
   m_Shader: {fileID: 4800000, guid: a627c438af3d28946b50c8cad0c75e9f, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -28,7 +28,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _ColorTransparency: 0
-    - _RimPower: 6
+    - _RimPower: 0.76
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 0.5803922}
-    - _RimColour: {r: 0.031372547, g: 1, b: 0.92937386, a: 0}
+    - _RimColour: {r: 0.77509564, g: 0.031372547, b: 1, a: 0}
