@@ -7,8 +7,14 @@ namespace Player
 	{
 		[SerializeField] private UnityEngine.Camera _targetCamera;
 		[SerializeField] private Arsenal _arsenal;
+        
 
-		private void Update()
+        private void Awake()
+        {
+            
+        }
+
+        private void Update()
 		{
 			if (Input.GetKeyDown(KeyCode.Mouse0))
 			{
