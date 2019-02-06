@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 114313771244237528}
   - component: {fileID: 82149007093472148}
   m_Layer: 0
-  m_Name: SFXVolumeManager
+  m_Name: MusicVolumeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1579,6 +1579,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1917132871192314
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4126100710875482}
+  - component: {fileID: 114187040754101126}
+  - component: {fileID: 82529755952512968}
+  m_Layer: 0
+  m_Name: SFXVolumeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1925769187828932
 GameObject:
   m_ObjectHideFlags: 1
@@ -1720,7 +1737,6 @@ GameObject:
   - component: {fileID: 20645292377439490}
   - component: {fileID: 114343628221388652}
   - component: {fileID: 114208497706386064}
-  - component: {fileID: 81122693577308912}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -1888,6 +1904,19 @@ Transform:
   - {fileID: 4376440874947530}
   m_Father: {fileID: 4670212086811052}
   m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4126100710875482
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917132871192314}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4541425452005262}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4143840949844214
 Transform:
@@ -2441,6 +2470,7 @@ Transform:
   - {fileID: 224779617273540184}
   - {fileID: 4260097327748800}
   - {fileID: 4285602414758564}
+  - {fileID: 4126100710875482}
   - {fileID: 4667371163032242}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -2627,7 +2657,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4541425452005262}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4670212086811052
 Transform:
@@ -3656,19 +3686,107 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!81 &81122693577308912
-AudioListener:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1986088345806016}
-  m_Enabled: 1
 --- !u!82 &82149007093472148
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225498797213178}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &82529755952512968
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917132871192314}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
@@ -3959,6 +4077,63 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114187040754101126
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1917132871192314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72185bdd675fe1a4f85010b9cbb11b79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Pistol
+    clip: {fileID: 8300000, guid: 86024b6d83ab0384aa474f3a928a8a9d, type: 3}
+    volume: 0.5
+    pitch: 3
+    _loop: 0
+    source: {fileID: 0}
+  - name: NoAmmo
+    clip: {fileID: 8300000, guid: a064fa7552e84c244a49f7ae80b54240, type: 3}
+    volume: 0.5
+    pitch: 2
+    _loop: 0
+    source: {fileID: 0}
+  - name: Sniper
+    clip: {fileID: 8300000, guid: d415717f7b6fd1e439225bffc5fea592, type: 3}
+    volume: 1
+    pitch: 1.72
+    _loop: 0
+    source: {fileID: 0}
+  - name: Boop
+    clip: {fileID: 8300000, guid: f4774350f24fde74186f9d955081de1e, type: 3}
+    volume: 0.5
+    pitch: 1
+    _loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: b541719286c69f845a75150ca254f549, type: 3}
+    volume: 0.6
+    pitch: 0.7
+    _loop: 0
+    source: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 3c99e884dc38333468cdfdbcb26b0053, type: 3}
+    volume: 1
+    pitch: 1
+    _loop: 0
+    source: {fileID: 0}
+  - name: Run
+    clip: {fileID: 8300000, guid: d5ac4cd17763f5048b2bbf06eee395a2, type: 3}
+    volume: 0.2
+    pitch: 1
+    _loop: 0
+    source: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 4eca50fecf1d7a6449f6f699ae6a8fc1, type: 2}
+  _audioGroup: {fileID: 243536444049518626, guid: 4eca50fecf1d7a6449f6f699ae6a8fc1,
+    type: 2}
 --- !u!114 &114208497706386064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4066,7 +4241,7 @@ MonoBehaviour:
   - {fileID: 198640773126707746}
   _shootSound: Pistol
   _noAmmoSound: NoAmmo
-  _sfxManager: {fileID: 114313771244237528}
+  _sfxManager: {fileID: 114187040754101126}
   damage: 30
   knockBack: 500
   lineIndex: 2
@@ -4104,28 +4279,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: Pistol
-    clip: {fileID: 8300000, guid: 86024b6d83ab0384aa474f3a928a8a9d, type: 3}
-    volume: 0.5
-    pitch: 3
-    source: {fileID: 0}
-  - name: NoAmmo
-    clip: {fileID: 8300000, guid: a064fa7552e84c244a49f7ae80b54240, type: 3}
-    volume: 0.5
-    pitch: 2
-    source: {fileID: 0}
-  - name: Sniper
-    clip: {fileID: 8300000, guid: 5160130e2784d034db78eab32d4f21be, type: 3}
-    volume: 0.5
+  - name: Music
+    clip: {fileID: 8300000, guid: f3a782f432c01984db5d8b6c857dee2c, type: 3}
+    volume: 1
     pitch: 1
-    source: {fileID: 0}
-  - name: Boop
-    clip: {fileID: 8300000, guid: f4774350f24fde74186f9d955081de1e, type: 3}
-    volume: 0.5
-    pitch: 1
+    _loop: 1
     source: {fileID: 0}
   audioMixer: {fileID: 24100000, guid: 4eca50fecf1d7a6449f6f699ae6a8fc1, type: 2}
-  _audioGroup: {fileID: 243536444049518626, guid: 4eca50fecf1d7a6449f6f699ae6a8fc1,
+  _audioGroup: {fileID: 243291799082558464, guid: 4eca50fecf1d7a6449f6f699ae6a8fc1,
     type: 2}
 --- !u!114 &114343628221388652
 MonoBehaviour:
@@ -4245,6 +4406,9 @@ MonoBehaviour:
   _walkSpeed: 0.2
   _runSpeed: 0.3
   _maxJumps: 2
+  _JumpSound: Jump
+  _RunSound: Run
+  _sfxManager: {fileID: 114187040754101126}
   _camera: {fileID: 4292251234547788}
 --- !u!114 &114476923805489570
 MonoBehaviour:
@@ -4433,7 +4597,7 @@ MonoBehaviour:
   shootEffects: []
   _shootSound: Sniper
   _noAmmoSound: NoAmmo
-  _sfxManager: {fileID: 114313771244237528}
+  _sfxManager: {fileID: 114187040754101126}
   damage: 100
   knockBack: 200
   lineIndex: 2
@@ -4530,6 +4694,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   respawnTime: 5
   isDead: 0
+  _playerDeath: Death
+  _sfxManager: {fileID: 114187040754101126}
   maxHealth: 100
   currentHealth: 100
   maxShield: 100
@@ -4564,7 +4730,7 @@ MonoBehaviour:
   - {fileID: 198979832236018902}
   _shootSound: Boop
   _noAmmoSound: NoAmmo
-  _sfxManager: {fileID: 114313771244237528}
+  _sfxManager: {fileID: 114187040754101126}
   prefabIndex: 0
   shooter: {fileID: 1149759666836142}
   initialForce: 1000

@@ -12,8 +12,10 @@ namespace Player
 	{
 		[SerializeField] private float respawnTime;
 		[SerializeField] private bool isDead;
+        [SerializeField] private string _playerDeath;
+        [SerializeField] private AudioManager _sfxManager;
 
-		private float _timeUntilReSpawn;
+        private float _timeUntilReSpawn;
 		
 		[SerializeField, Range(1, 1000)] private int maxHealth;
 		[SerializeField] private int currentHealth;
@@ -105,6 +107,8 @@ namespace Player
 			if (isDead) return;
 			_timeUntilReSpawn = respawnTime;
 			isDead = true;
+            _sfxManager.Play(_playerDeath, true);
+
 			// Disable all the components.
 			capsuleCollider.enabled = false;
 			weapons.SetActive(false);

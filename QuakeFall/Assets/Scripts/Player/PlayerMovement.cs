@@ -8,8 +8,9 @@ namespace Player
 		[SerializeField] private float _jumpForce;
 		[SerializeField] private float _walkSpeed, _runSpeed;
 		[SerializeField] private int _maxJumps;
-
-		[SerializeField] private Transform _camera;
+        [SerializeField] private string _JumpSound, _RunSound;
+        [SerializeField] private AudioManager _sfxManager;
+        [SerializeField] private Transform _camera;
 
 		private Rigidbody _rigidBody;
 		private int _jumpCount;
@@ -42,12 +43,20 @@ namespace Player
 			var horizontal = Input.GetAxis("Horizontal");
 			var vertical = Input.GetAxis("Vertical");
 
-			var currentAcceleration = Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
+            if (Mathf.Abs(horizontal) + Mathf.Abs(vertical) > 0 && Mathf.Abs(_rigidBody.velocity.y) <= 0.1)
+            {
+                _sfxManager.Play(_RunSound, false);
+            }
+            else
+            {
+                _sfxManager.Stop(_RunSound);
+            }
+
+            var currentAcceleration = Input.GetKey(KeyCode.LeftShift) ? _runSpeed : _walkSpeed;
 			var forwardVector = transform.forward * vertical * currentAcceleration;
 			var rightVector = transform.right * horizontal * currentAcceleration;
 			var targetPosition = transform.position + forwardVector + rightVector;
-			_rigidBody.MovePosition(targetPosition);
-			
+			_rigidBody.MovePosition(targetPosition);			
 			// Check if the player can jump.
 			if (_jumpCount < _maxJumps && Input.GetKeyDown(KeyCode.Space))
 			{
@@ -58,6 +67,7 @@ namespace Player
 				
 				var newForce = Vector3.up * _jumpForce;
 				_rigidBody.AddForce(newForce);
+                _sfxManager.Play(_JumpSound, true);
 			}
 		}
 

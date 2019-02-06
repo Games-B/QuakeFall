@@ -37,7 +37,7 @@ namespace Weapons
 			// Don't shoot if enough time has not passed or you don't have enough ammo or you don't have the weapon.
 			if (_timeSinceShot < fireRate || ammo < 1)
 			{
-                if (ammo < 1) _sfxManager.Play(_noAmmoSound);
+                if (ammo < 1) _sfxManager.Play(_noAmmoSound, true);
                 targetPoint = Vector3.zero;
 				hit = new RaycastHit();
                 return false;
@@ -45,7 +45,7 @@ namespace Weapons
 			_timeSinceShot = 0;
 			ammo--;
 
-            _sfxManager.Play(_shootSound);
+            _sfxManager.Play(_shootSound, true);
 
             // Play the VFX.
             foreach (var effect in shootEffects)

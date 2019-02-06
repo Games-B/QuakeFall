@@ -19,24 +19,36 @@ public class AudioManager : MonoBehaviour {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.outputAudioMixerGroup = _audioGroup;
             s.source.clip = s.clip;
+            s.source.loop = s.IsLoop();
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
 
         }
 	}
+
     private void Start()
     {
-        Play("Music");
+        Play("Music", false);
     }
 
     //FindObjectOfType<AudioManager>().Play("AudioName");
 
-    public void Play (string name)
+    public void Play (string name, bool playOverSelf)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         Debug.Log(s);
-        s.source.Play();
+        if (playOverSelf || (!playOverSelf && !s.source.isPlaying))
+        {
+            s.source.Play();
+        }
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        Debug.Log(s);
+        s.source.Stop();
     }
 
     public void SetVolume(float volume)
