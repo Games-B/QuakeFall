@@ -21,12 +21,17 @@ namespace UI
 		{
 			if (Input.GetKeyDown(KeyCode.Mouse1))
 			{
-				_isScoped = !_isScoped;
-				_animator.SetBool("ScopedIn", _isScoped);
-				
-				if (!_isScoped) OnUnscoped();
+				_isScoped = true;
+				_animator.SetBool("ScopedIn", true);
 			}
-
+			else if (Input.GetKeyUp(KeyCode.Mouse1))
+			{
+				_isScoped = false;
+				_animator.SetBool("ScopedIn", false);
+				OnUnscoped();
+			}
+			
+			
 			if (_isScoped)
 			{
 				if (_scopeTimer >= _scopeTime) OnScoped();
